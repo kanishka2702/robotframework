@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-03T21:15:33.479641" rpa="false" schemaversion="5">
+<suite id="s1" name="Robotframework" source="C:\Users\admin\PycharmProjects\robotframework">
+<suite id="s1-s1" name="Test" source="C:\Users\admin\PycharmProjects\robotframework\test.robot">
+<test id="s1-s1-t1" name="Amazonwebsite" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-03T21:15:35.546669" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<arg>https://demo.nopcommerce.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-03T21:15:35.545956" elapsed="8.967273"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-03T21:15:49.515744" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-03T21:15:44.514016" elapsed="5.002580"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-03T21:15:49.517081" elapsed="3.501750"/>
+</kw>
+<status status="PASS" start="2026-02-03T21:15:35.536821" elapsed="17.482662"/>
+</test>
+<status status="PASS" start="2026-02-03T21:15:33.869203" elapsed="19.160292"/>
+</suite>
+<status status="PASS" start="2026-02-03T21:15:33.694739" elapsed="19.341884"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robotframework" id="s1" pass="1" fail="0" skip="0">Robotframework</stat>
+<stat name="Test" id="s1-s1" pass="1" fail="0" skip="0">Robotframework.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
