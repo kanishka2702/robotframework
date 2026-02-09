@@ -8,24 +8,20 @@ ${browser}    chrome
 *** Test Cases ***
 WaitSpeedSleep
 
-    ${speed}=    Get Selenium Speed
-    Log To Console    ${speed}
-
     open browser        ${url}    ${browser}
     maximize browser window
 
-    Set Selenium Speed    2 seconds
+    ${time}=    Get Selenium Timeout
+    Log To Console    ${time}
 
+    Set Selenium Timeout    10 seconds  #Now wait page appearith Register title for 10 sesconds instead default timeout which is 5 seconds
+    Wait Until Page Contains    Register1     #Default time is 5 seconds in console this will appear, Register1 is not proper title on page
 
-    set selenium speed  3 seconds
     select radio button    Gender         M
     input text             name:FirstName      David
     input text             name:LastName       John
     input text             name:Email          anhc@gmail.com
     input text             name:Password       davidjohn
     input text             name:ConfirmPassword    davidjohn
-
-    ${speed}=    Get Selenium Speed
-    Log To Console    ${speed}
 
     Close Browser

@@ -1,79 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-07T15:36:23.589974" rpa="false" schemaversion="5">
-<suite id="s1" name="TC3 Dropdown" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC3_Dropdown.robot">
-<test id="s1-t1" name="Handling Dropdowns and lists" line="10">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-09T19:58:02.237821" rpa="false" schemaversion="5">
+<suite id="s1" name="TC6 ImplicitWait" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC6_ImplicitWait.robot">
+<test id="s1-t1" name="WaitSpeedSleep" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-07T15:36:24.236267" level="INFO">Opening browser 'edge' to base url 'https://practice.expandtesting.com/dropdown'.</msg>
-<arg>${url1}</arg>
+<msg time="2026-02-09T19:58:02.840382" level="INFO">Opening browser 'chrome' to base url 'http://demowebshop.tricentis.com/register'.</msg>
+<arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-07T15:36:24.235123" elapsed="16.191893"/>
+<status status="PASS" start="2026-02-09T19:58:02.838468" elapsed="7.298262"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-07T15:36:40.430276" elapsed="0.512478"/>
+<status status="PASS" start="2026-02-09T19:58:10.141833" elapsed="0.073223"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-07T15:36:42.950042" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-07T15:36:40.943397" elapsed="2.007848"/>
+<kw name="Get Selenium Implicit Wait" owner="SeleniumLibrary">
+<msg time="2026-02-09T19:58:10.216241" level="INFO">${Implicittime} = 0 seconds</msg>
+<var>${Implicittime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-09T19:58:10.215559" elapsed="0.000796"/>
 </kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-02-07T15:36:42.959582" level="INFO">Selecting options from selection list 'dropdown' by label Option 1.</msg>
-<arg>dropdown</arg>
-<arg>Option 1</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-02-07T15:36:42.957917" elapsed="1.412504"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${Implicittime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-09T19:58:10.220893" elapsed="0.001333"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-07T15:36:46.375267" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-07T15:36:44.373740" elapsed="2.001804"/>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-09T19:58:10.222985" elapsed="0.001788"/>
 </kw>
-<kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2026-02-07T15:36:46.376941" level="INFO">Selecting options from selection list 'country' by index 6.</msg>
-<arg>country</arg>
-<arg>6</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2026-02-07T15:36:46.376569" elapsed="0.206364"/>
+<kw name="Get Selenium Implicit Wait" owner="SeleniumLibrary">
+<msg time="2026-02-09T19:58:10.231713" level="INFO">${Implicittime} = 10 seconds</msg>
+<var>${Implicittime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-09T19:58:10.231028" elapsed="0.000790"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-07T15:36:48.585577" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-07T15:36:46.584068" elapsed="2.001730"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${Implicittime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-09T19:58:10.264896" elapsed="0.001273"/>
 </kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2026-02-07T15:36:48.586649" level="INFO">Selecting options from selection list 'elementsPerPageSelect' by value 50.</msg>
-<arg>elementsPerPageSelect</arg>
-<arg>50</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2026-02-07T15:36:48.586301" elapsed="0.355388"/>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T19:58:10.266986" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-02-09T19:58:10.266700" elapsed="0.206408"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-07T15:36:53.944857" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-07T15:36:48.943680" elapsed="5.001382"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T19:58:10.474753" level="INFO">Typing text 'David' into text field 'name:FirstName1'.</msg>
+<msg time="2026-02-09T19:58:20.614983" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-09T19:58:20.615330" level="FAIL">Element with locator 'name:FirstName1' not found.</msg>
+<arg>name:FirstName1</arg>
+<arg>David</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-09T19:58:10.473882" elapsed="10.151737">Element with locator 'name:FirstName1' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:LastName</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T19:58:20.626288" elapsed="0.000080"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:Email</arg>
+<arg>anhc@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T19:58:20.626722" elapsed="0.000054"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:Password</arg>
+<arg>davidjohn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T19:58:20.627084" elapsed="0.000052"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>davidjohn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T19:58:20.627447" elapsed="0.000050"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-07T15:36:53.946326" elapsed="3.037237"/>
+<status status="NOT RUN" start="2026-02-09T19:58:20.627791" elapsed="0.000049"/>
 </kw>
-<status status="PASS" start="2026-02-07T15:36:24.233250" elapsed="32.750897"/>
+<status status="FAIL" start="2026-02-09T19:58:02.836750" elapsed="17.791505">Element with locator 'name:FirstName1' not found.</status>
 </test>
-<status status="PASS" start="2026-02-07T15:36:23.592713" elapsed="33.394739"/>
+<status status="FAIL" start="2026-02-09T19:58:02.240579" elapsed="18.389150"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TC3 Dropdown" id="s1" pass="1" fail="0" skip="0">TC3 Dropdown</stat>
+<stat name="TC6 ImplicitWait" id="s1" pass="0" fail="1" skip="0">TC6 ImplicitWait</stat>
 </suite>
 </statistics>
 <errors>
