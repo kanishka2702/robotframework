@@ -1,62 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-16T16:45:38.371443" rpa="false" schemaversion="5">
-<suite id="s1" name="TC9 Frames" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC9_Frames.robot">
-<test id="s1-t1" name="HandlingFrames" line="10">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-17T19:53:37.742555" rpa="false" schemaversion="5">
+<suite id="s1" name="TC11 SwitchMultipleWindow" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC11_SwitchMultipleWindow.robot">
+<test id="s1-t1" name="TabbedWindowsTest" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-16T16:45:38.796186" level="INFO">Opening browser 'chrome' to base url 'https://seleniumbase.io/demo_page'.</msg>
-<arg>${url1}</arg>
+<msg time="2026-02-17T19:53:38.395979" level="INFO">Opening browser 'edge' to base url 'https://www.google.com/'.</msg>
+<arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-16T16:45:38.795508" elapsed="3.723008"/>
+<status status="PASS" start="2026-02-17T19:53:38.394843" elapsed="9.851090"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-16T16:45:42.525452" elapsed="0.109809"/>
-</kw>
-<kw name="Select Frame" owner="SeleniumLibrary">
-<msg time="2026-02-16T16:45:42.640571" level="INFO">Selecting frame 'frameName3'.</msg>
-<arg>frameName3</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="PASS" start="2026-02-16T16:45:42.637972" elapsed="0.149629"/>
+<status status="PASS" start="2026-02-17T19:53:48.266914" elapsed="0.137845"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-16T16:45:47.789380" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
+<msg time="2026-02-17T19:53:51.414162" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-16T16:45:42.788306" elapsed="5.001364"/>
+<status status="PASS" start="2026-02-17T19:53:48.413104" elapsed="3.001331"/>
 </kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2026-02-16T16:45:47.790686" level="INFO">Selecting checkbox 'checkBoxName6'.</msg>
-<arg>checkBoxName6</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-16T16:45:47.790216" elapsed="0.214746"/>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-17T19:53:51.415840" level="INFO">Opening browser 'edge' to base url 'https://practice-automation.com/window-operations/'.</msg>
+<arg>${url1}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-17T19:53:51.415192" elapsed="7.226046"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-17T19:53:58.643449" elapsed="0.131809"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-16T16:45:53.007668" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
+<msg time="2026-02-17T19:54:01.778187" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-16T16:45:48.006543" elapsed="5.001353"/>
+<status status="PASS" start="2026-02-17T19:53:58.777200" elapsed="3.001217"/>
 </kw>
-<kw name="Unselect Frame" owner="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" start="2026-02-16T16:45:53.021169" elapsed="0.007633"/>
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" start="2026-02-17T19:54:01.781795" elapsed="0.000351"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-16T16:45:53.032002" elapsed="3.065907"/>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-02-17T19:54:01.818344" level="INFO">${title1} = Google</msg>
+<var>${title1}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-02-17T19:54:01.782479" elapsed="0.035943"/>
 </kw>
-<status status="PASS" start="2026-02-16T16:45:38.793226" elapsed="17.305432"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${title1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T19:54:01.818799" elapsed="0.000601"/>
+</kw>
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>2</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" start="2026-02-17T19:54:01.819773" elapsed="0.000243"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-02-17T19:54:01.828074" level="INFO">${title2} = Window Operations | Practice Automation</msg>
+<var>${title2}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-02-17T19:54:01.820272" elapsed="0.007886"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${title2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T19:54:01.828852" elapsed="0.003411"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<msg time="2026-02-17T19:54:02.111879" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T19:54:02.112179" level="FAIL">No window matching handle, name, title or URL '1' found.</msg>
+<arg>1</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="FAIL" start="2026-02-17T19:54:01.835179" elapsed="0.835182">No window matching handle, name, title or URL '1' found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-17T19:54:02.670854" elapsed="0.000074"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" start="2026-02-17T19:54:02.671327" elapsed="0.000063"/>
+</kw>
+<status status="FAIL" start="2026-02-17T19:53:38.393151" elapsed="24.278659">No window matching handle, name, title or URL '1' found.</status>
 </test>
-<status status="PASS" start="2026-02-16T16:45:38.374354" elapsed="17.725827"/>
+<status status="FAIL" start="2026-02-17T19:53:37.745323" elapsed="24.927512"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TC9 Frames" id="s1" pass="1" fail="0" skip="0">TC9 Frames</stat>
+<stat name="TC11 SwitchMultipleWindow" id="s1" pass="0" fail="1" skip="0">TC11 SwitchMultipleWindow</stat>
 </suite>
 </statistics>
 <errors>
