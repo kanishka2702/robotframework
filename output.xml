@@ -1,101 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-17T19:53:37.742555" rpa="false" schemaversion="5">
-<suite id="s1" name="TC11 SwitchMultipleWindow" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC11_SwitchMultipleWindow.robot">
-<test id="s1-t1" name="TabbedWindowsTest" line="10">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-18T15:38:03.799949" rpa="false" schemaversion="5">
+<suite id="s1" name="TC13 CaptureScreen" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC13_CaptureScreen.robot">
+<test id="s1-t1" name="BrowserNavigationTest" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-17T19:53:38.395979" level="INFO">Opening browser 'edge' to base url 'https://www.google.com/'.</msg>
+<msg time="2026-02-18T15:38:04.385709" level="INFO">Opening browser 'edge' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-17T19:53:38.394843" elapsed="9.851090"/>
+<status status="PASS" start="2026-02-18T15:38:04.385223" elapsed="17.917813"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-18T15:38:32.306102" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-18T15:38:22.304968" elapsed="10.001423"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-17T19:53:48.266914" elapsed="0.137845"/>
+<status status="PASS" start="2026-02-18T15:38:32.307161" elapsed="0.111259"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-18T15:38:32.422840" level="INFO">Typing text 'Admin' into text field 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-18T15:38:32.422002" elapsed="0.337544"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-18T15:38:32.760663" level="INFO">Typing text 'admin123' into text field 'name:password'.</msg>
+<arg>name:password</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-18T15:38:32.760301" elapsed="0.146007"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-17T19:53:51.414162" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
+<msg time="2026-02-18T15:38:37.907890" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-17T19:53:48.413104" elapsed="3.001331"/>
+<status status="PASS" start="2026-02-18T15:38:32.907160" elapsed="5.001018"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-17T19:53:51.415840" level="INFO">Opening browser 'edge' to base url 'https://practice-automation.com/window-operations/'.</msg>
-<arg>${url1}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-17T19:53:51.415192" elapsed="7.226046"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-17T19:53:58.643449" elapsed="0.131809"/>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-18T15:38:38.099970" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="HRMLogo.png"&gt;&lt;img src="HRMLogo.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>xpath://*[@id="app"]/div[1]/div/div[1]/div/div[1]/img</arg>
+<arg>C:/Users/admin/PycharmProjects/robotframework/HRMLogo.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2026-02-18T15:38:37.908952" elapsed="0.196752"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-17T19:54:01.778187" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-17T19:53:58.777200" elapsed="3.001217"/>
-</kw>
-<kw name="Switch Browser" owner="SeleniumLibrary">
-<arg>1</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" start="2026-02-17T19:54:01.781795" elapsed="0.000351"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-02-17T19:54:01.818344" level="INFO">${title1} = Google</msg>
-<var>${title1}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-02-17T19:54:01.782479" elapsed="0.035943"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${title1}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-17T19:54:01.818799" elapsed="0.000601"/>
-</kw>
-<kw name="Switch Browser" owner="SeleniumLibrary">
+<msg time="2026-02-18T15:38:40.114917" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" start="2026-02-17T19:54:01.819773" elapsed="0.000243"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-02-17T19:54:01.828074" level="INFO">${title2} = Window Operations | Practice Automation</msg>
-<var>${title2}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-02-17T19:54:01.820272" elapsed="0.007886"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${title2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-17T19:54:01.828852" elapsed="0.003411"/>
-</kw>
-<kw name="Switch Window" owner="SeleniumLibrary">
-<msg time="2026-02-17T19:54:02.111879" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-02-17T19:54:02.112179" level="FAIL">No window matching handle, name, title or URL '1' found.</msg>
-<arg>1</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="FAIL" start="2026-02-17T19:54:01.835179" elapsed="0.835182">No window matching handle, name, title or URL '1' found.</status>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-02-17T19:54:02.670854" elapsed="0.000074"/>
+<status status="PASS" start="2026-02-18T15:38:38.113506" elapsed="2.001697"/>
 </kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="NOT RUN" start="2026-02-17T19:54:02.671327" elapsed="0.000063"/>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-18T15:38:40.231092" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="LOGINHRM.png"&gt;&lt;img src="LOGINHRM.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>C:/Users/admin/PycharmProjects/robotframework/LOGINHRM.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-18T15:38:40.116738" elapsed="0.114519"/>
 </kw>
-<status status="FAIL" start="2026-02-17T19:53:38.393151" elapsed="24.278659">No window matching handle, name, title or URL '1' found.</status>
+<status status="PASS" start="2026-02-18T15:38:04.383446" elapsed="35.849175"/>
 </test>
-<status status="FAIL" start="2026-02-17T19:53:37.745323" elapsed="24.927512"/>
+<status status="PASS" start="2026-02-18T15:38:03.802909" elapsed="36.430709"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TC11 SwitchMultipleWindow" id="s1" pass="0" fail="1" skip="0">TC11 SwitchMultipleWindow</stat>
+<stat name="TC13 CaptureScreen" id="s1" pass="1" fail="0" skip="0">TC13 CaptureScreen</stat>
 </suite>
 </statistics>
 <errors>
