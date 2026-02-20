@@ -1,66 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-19T18:35:28.902565" rpa="false" schemaversion="5">
-<suite id="s1" name="TC14 MouseActions" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC14_MouseActions.robot">
-<test id="s1-t1" name="MouseClickActions" line="11">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-20T16:45:56.677564" rpa="false" schemaversion="5">
+<suite id="s1" name="TC15 UserKeywords" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC15_UserKeywords.robot">
+<test id="s1-t1" name="TC1" line="10">
+<kw name="LaunchBrowser2" owner="UserDefineKeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-19T18:35:30.011733" level="INFO">Opening browser 'edge' to base url 'https://www.onlinemictest.com/mouse-test/'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<msg time="2026-02-20T16:45:57.269869" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/login.php'.</msg>
+<arg>${appUrl}</arg>
+<arg>${appBrowser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-19T18:35:30.009087" elapsed="12.247847"/>
+<status status="PASS" start="2026-02-20T16:45:57.269473" elapsed="7.925058"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-19T18:35:42.260997" elapsed="1.249940"/>
+<status status="PASS" start="2026-02-20T16:46:05.196114" elapsed="0.082183"/>
 </kw>
-<kw name="Open Context Menu" owner="SeleniumLibrary">
-<arg>xpath://*[@id="menu-item-12"]/a</arg>
-<doc>Opens the context menu on the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-19T18:35:43.518569" elapsed="11.191214"/>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-02-20T16:46:05.309908" level="INFO">${title} = Sign-on: Mercury Tours</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-02-20T16:46:05.278607" elapsed="0.031414"/>
+</kw>
+<return>
+<value>${title}</value>
+<status status="PASS" start="2026-02-20T16:46:05.310166" elapsed="0.000118"/>
+</return>
+<msg time="2026-02-20T16:46:05.310591" level="INFO">${pageTitle} = Sign-on: Mercury Tours</msg>
+<var>${pageTitle}</var>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2026-02-20T16:45:57.267421" elapsed="8.043222"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-20T16:46:05.311874" elapsed="0.000810"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-20T16:46:05.315051" level="INFO">Sign-on: Mercury Tours</msg>
+<arg>${pageTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-20T16:46:05.313018" elapsed="0.002391"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T16:46:05.385417" level="INFO">Typing text 'mercury' into text field 'name:userName'.</msg>
+<arg>name:userName</arg>
+<arg>mercury</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T16:46:05.384355" elapsed="0.334534"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T16:46:05.719758" level="INFO">Typing text 'mercury' into text field 'name:password'.</msg>
+<arg>name:password</arg>
+<arg>mercury</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T16:46:05.719418" elapsed="0.147313"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-19T18:35:57.713183" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-19T18:35:54.711056" elapsed="3.002886"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-02-19T18:35:57.718744" level="INFO">Opening url 'https://testautomationpractice.blogspot.com/'</msg>
-<arg>${url2}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-02-19T18:35:57.718361" elapsed="7.246159"/>
-</kw>
-<kw name="Double Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-19T18:36:04.965317" level="INFO">Double clicking element 'xpath://*[@id="HTML10"]/div[1]/button'.</msg>
-<arg>xpath://*[@id="HTML10"]/div[1]/button</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-19T18:36:04.964957" elapsed="0.530823"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-19T18:36:10.501793" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-02-20T16:46:10.868738" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-19T18:36:05.499772" elapsed="5.002280"/>
+<status status="PASS" start="2026-02-20T16:46:05.867423" elapsed="5.001811"/>
 </kw>
-<kw name="Drag And Drop" owner="SeleniumLibrary">
-<arg>id:draggable</arg>
-<arg>id:droppable</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2026-02-19T18:36:10.502780" elapsed="0.611767"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-19T18:36:17.117259" level="INFO">Slept 6 seconds.</msg>
-<arg>6</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-19T18:36:11.115848" elapsed="6.001689"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-19T18:36:17.118481" elapsed="2.639341"/>
-</kw>
-<status status="PASS" start="2026-02-19T18:35:30.007166" elapsed="49.751665"/>
+<status status="PASS" start="2026-02-20T16:45:57.266380" elapsed="13.603851"/>
 </test>
-<status status="PASS" start="2026-02-19T18:35:28.907814" elapsed="50.852594"/>
+<status status="PASS" start="2026-02-20T16:45:56.680947" elapsed="14.192066"/>
 </suite>
 <statistics>
 <total>
@@ -69,7 +72,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC14 MouseActions" id="s1" pass="1" fail="0" skip="0">TC14 MouseActions</stat>
+<stat name="TC15 UserKeywords" id="s1" pass="1" fail="0" skip="0">TC15 UserKeywords</stat>
 </suite>
 </statistics>
 <errors>
