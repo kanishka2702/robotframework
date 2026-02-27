@@ -1,410 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-26T17:32:14.665376" rpa="false" schemaversion="5">
-<suite id="s1" name="TC17 FORLOOP" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC17_FORLOOP.robot">
-<test id="s1-t1" name="ForLoop_RANGE" line="4">
-<for flavor="IN RANGE">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.759935" elapsed="0.009728"/>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-27T19:05:31.956340" rpa="false" schemaversion="5">
+<suite id="s1" name="TC19 HTMLTABLE" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC19_HTMLTABLE.robot">
+<test id="s1-t1" name="TableValidation" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-27T19:05:32.549691" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/sql/sql_distinct.asp'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-27T19:05:32.547962" elapsed="8.735524"/>
 </kw>
-<var name="${i}">1</var>
-<status status="PASS" start="2026-02-26T17:32:14.759086" elapsed="0.010730"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.770371" elapsed="0.000907"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-27T19:05:41.286600" elapsed="3.721843"/>
 </kw>
-<var name="${i}">2</var>
-<status status="PASS" start="2026-02-26T17:32:14.770057" elapsed="0.001317"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.777187" elapsed="0.005063"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-02-27T19:05:45.158548" level="INFO">${rows} = 6</msg>
+<var>${rows}</var>
+<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.008864" elapsed="0.149776"/>
 </kw>
-<var name="${i}">3</var>
-<status status="PASS" start="2026-02-26T17:32:14.771551" elapsed="0.010807"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.782748" elapsed="0.021070"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-02-27T19:05:45.190861" level="INFO">${columns} = 7</msg>
+<var>${columns}</var>
+<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.159085" elapsed="0.031872"/>
 </kw>
-<var name="${i}">4</var>
-<status status="PASS" start="2026-02-26T17:32:14.782545" elapsed="0.021382"/>
-</iter>
-<iter>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
+<arg>${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.804306" elapsed="0.002011"/>
+<status status="PASS" start="2026-02-27T19:05:45.191445" elapsed="0.000839"/>
 </kw>
-<var name="${i}">5</var>
-<status status="PASS" start="2026-02-26T17:32:14.804114" elapsed="0.002307"/>
-</iter>
-<iter>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
+<arg>${columns}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.806810" elapsed="0.000791"/>
+<status status="PASS" start="2026-02-27T19:05:45.192607" elapsed="0.003046"/>
 </kw>
-<var name="${i}">6</var>
-<status status="PASS" start="2026-02-26T17:32:14.806602" elapsed="0.001363"/>
-</iter>
-<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T19:05:45.261385" level="INFO">${data} = 4</msg>
+<var>${data}</var>
+<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr[5]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.196449" elapsed="0.065015"/>
+</kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
+<arg>${data}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.808317" elapsed="0.001103"/>
+<status status="PASS" start="2026-02-27T19:05:45.261840" elapsed="0.000634"/>
 </kw>
-<var name="${i}">7</var>
-<status status="PASS" start="2026-02-26T17:32:14.808178" elapsed="0.001340"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.809840" elapsed="0.000766"/>
-</kw>
-<var name="${i}">8</var>
-<status status="PASS" start="2026-02-26T17:32:14.809702" elapsed="0.001060"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.811066" elapsed="0.001917"/>
-</kw>
-<var name="${i}">9</var>
-<status status="PASS" start="2026-02-26T17:32:14.810929" elapsed="0.002220"/>
-</iter>
-<var>${i}</var>
-<value>1</value>
-<value>10</value>
-<status status="PASS" start="2026-02-26T17:32:14.758493" elapsed="0.054728"/>
-</for>
-<status status="PASS" start="2026-02-26T17:32:14.757284" elapsed="0.056674"/>
-</test>
-<test id="s1-t2" name="FORLOOP_IN" line="10">
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.826297" elapsed="0.000880"/>
-</kw>
-<var name="${a}">1</var>
-<status status="PASS" start="2026-02-26T17:32:14.826160" elapsed="0.001103"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.827862" elapsed="0.002299"/>
-</kw>
-<var name="${a}">2</var>
-<status status="PASS" start="2026-02-26T17:32:14.827444" elapsed="0.002841"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.830646" elapsed="0.008458"/>
-</kw>
-<var name="${a}">3</var>
-<status status="PASS" start="2026-02-26T17:32:14.830497" elapsed="0.008711"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.839542" elapsed="0.010873"/>
-</kw>
-<var name="${a}">4</var>
-<status status="PASS" start="2026-02-26T17:32:14.839401" elapsed="0.011129"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.850867" elapsed="0.014280"/>
-</kw>
-<var name="${a}">5</var>
-<status status="PASS" start="2026-02-26T17:32:14.850719" elapsed="0.014540"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.865588" elapsed="0.001421"/>
-</kw>
-<var name="${a}">6</var>
-<status status="PASS" start="2026-02-26T17:32:14.865451" elapsed="0.001654"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.867417" elapsed="0.000726"/>
-</kw>
-<var name="${a}">7</var>
-<status status="PASS" start="2026-02-26T17:32:14.867281" elapsed="0.000933"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${a}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.868464" elapsed="0.001207"/>
-</kw>
-<var name="${a}">8</var>
-<status status="PASS" start="2026-02-26T17:32:14.868352" elapsed="0.001666"/>
-</iter>
-<var>${a}</var>
-<value>1</value>
-<value>2</value>
-<value>3</value>
-<value>4</value>
-<value>5</value>
-<value>6</value>
-<value>7</value>
-<value>8</value>
-<status status="PASS" start="2026-02-26T17:32:14.825910" elapsed="0.044171"/>
-</for>
-<status status="PASS" start="2026-02-26T17:32:14.816284" elapsed="0.054223"/>
-</test>
-<test id="s1-t3" name="FORLOOP_INTEGER_LIST" line="16">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-26T17:32:14.872441" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
-<var>@{items}</var>
-<arg>1</arg>
+<kw name="Table Column Should Contain" owner="SeleniumLibrary">
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
 <arg>2</arg>
-<arg>3</arg>
-<arg>4</arg>
-<arg>5</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.871885" elapsed="0.000616"/>
+<arg>CustomerName</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.262763" elapsed="0.051065"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${b}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.883027" elapsed="0.013468"/>
-</kw>
-<var name="${b}">1</var>
-<status status="PASS" start="2026-02-26T17:32:14.882889" elapsed="0.013751"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${b}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.897150" elapsed="0.000913"/>
-</kw>
-<var name="${b}">2</var>
-<status status="PASS" start="2026-02-26T17:32:14.896912" elapsed="0.001225"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${b}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.898393" elapsed="0.000573"/>
-</kw>
-<var name="${b}">3</var>
-<status status="PASS" start="2026-02-26T17:32:14.898278" elapsed="0.000757"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${b}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.899296" elapsed="0.003425"/>
-</kw>
-<var name="${b}">4</var>
-<status status="PASS" start="2026-02-26T17:32:14.899177" elapsed="0.004040"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${b}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.903555" elapsed="0.000878"/>
-</kw>
-<var name="${b}">5</var>
-<status status="PASS" start="2026-02-26T17:32:14.903414" elapsed="0.001098"/>
-</iter>
-<var>${b}</var>
-<value>@{items}</value>
-<status status="PASS" start="2026-02-26T17:32:14.882621" elapsed="0.021948"/>
-</for>
-<status status="PASS" start="2026-02-26T17:32:14.871247" elapsed="0.034218"/>
-</test>
-<test id="s1-t4" name="FORLOOP_STRINGS" line="22">
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.908426" elapsed="0.008316"/>
-</kw>
-<var name="${i}">John</var>
-<status status="PASS" start="2026-02-26T17:32:14.908271" elapsed="0.008597"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.917187" elapsed="0.000761"/>
-</kw>
-<var name="${i}">David</var>
-<status status="PASS" start="2026-02-26T17:32:14.917051" elapsed="0.001110"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.918455" elapsed="0.010052"/>
-</kw>
-<var name="${i}">Scott</var>
-<status status="PASS" start="2026-02-26T17:32:14.918327" elapsed="0.010283"/>
-</iter>
-<var>${i}</var>
-<value>John</value>
-<value>David</value>
-<value>Scott</value>
-<status status="PASS" start="2026-02-26T17:32:14.908038" elapsed="0.020634"/>
-</for>
-<status status="PASS" start="2026-02-26T17:32:14.906437" elapsed="0.022974"/>
-</test>
-<test id="s1-t5" name="FORLOOP_STRING_LIST" line="27">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-26T17:32:14.954898" level="INFO">@{names} = [ KR | ANJI | AMIT | sashi ]</msg>
-<var>@{names}</var>
-<arg>KR</arg>
-<arg>ANJI</arg>
-<arg>AMIT</arg>
-<arg>sashi</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.954301" elapsed="0.000656"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.955870" elapsed="0.000747"/>
-</kw>
-<var name="${i}">KR</var>
-<status status="PASS" start="2026-02-26T17:32:14.955742" elapsed="0.000955"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.957058" elapsed="0.000686"/>
-</kw>
-<var name="${i}">ANJI</var>
-<status status="PASS" start="2026-02-26T17:32:14.956853" elapsed="0.000963"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.958078" elapsed="0.000642"/>
-</kw>
-<var name="${i}">AMIT</var>
-<status status="PASS" start="2026-02-26T17:32:14.957963" elapsed="0.000830"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.959082" elapsed="0.000612"/>
-</kw>
-<var name="${i}">sashi</var>
-<status status="PASS" start="2026-02-26T17:32:14.958968" elapsed="0.000797"/>
-</iter>
-<var>${i}</var>
-<value>@{names}</value>
-<status status="PASS" start="2026-02-26T17:32:14.955513" elapsed="0.004306"/>
-</for>
-<status status="PASS" start="2026-02-26T17:32:14.940354" elapsed="0.019795"/>
-</test>
-<test id="s1-t6" name="FORLOOP_EXIT" line="34">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-26T17:32:14.961806" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
-<var>@{items}</var>
-<arg>1</arg>
+<kw name="Table Row Should Contain" owner="SeleniumLibrary">
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
 <arg>2</arg>
+<arg>2</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.314400" elapsed="0.050512"/>
+</kw>
+<kw name="Table Cell Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-27T19:05:45.444129" level="INFO">Table cell contains 'Christina Berglund'.</msg>
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
+<arg>6</arg>
 <arg>3</arg>
-<arg>4</arg>
-<arg>5</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.961314" elapsed="0.000538"/>
+<arg>Christina Berglund</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.365363" elapsed="0.078915"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.962660" elapsed="0.001083"/>
+<kw name="Table Header Should Contain" owner="SeleniumLibrary">
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
+<arg>PostalCode</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.444732" elapsed="0.145563"/>
 </kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>${i}==3</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.970277" elapsed="0.000847"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-27T19:05:45.590936" elapsed="3.524226"/>
 </kw>
-<var name="${i}">1</var>
-<status status="PASS" start="2026-02-26T17:32:14.962367" elapsed="0.008846"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.971523" elapsed="0.002094"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>${i}==3</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.973835" elapsed="0.000709"/>
-</kw>
-<var name="${i}">2</var>
-<status status="PASS" start="2026-02-26T17:32:14.971379" elapsed="0.003232"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.974876" elapsed="0.013718"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<msg time="2026-02-26T17:32:14.990250" level="INFO">Exiting for loop altogether.</msg>
-<arg>${i}==3</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-26T17:32:14.988818" elapsed="0.001571"/>
-</kw>
-<var name="${i}">3</var>
-<status status="PASS" start="2026-02-26T17:32:14.974767" elapsed="0.015706"/>
-</iter>
-<var>${i}</var>
-<value>@{items}</value>
-<status status="PASS" start="2026-02-26T17:32:14.962157" elapsed="0.028378"/>
-</for>
-<status status="PASS" start="2026-02-26T17:32:14.960827" elapsed="0.030244"/>
+<status status="PASS" start="2026-02-27T19:05:32.546131" elapsed="16.569522"/>
 </test>
-<status status="PASS" start="2026-02-26T17:32:14.676119" elapsed="0.316096"/>
+<status status="PASS" start="2026-02-27T19:05:31.964139" elapsed="17.152596"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TC17 FORLOOP" id="s1" pass="6" fail="0" skip="0">TC17 FORLOOP</stat>
+<stat name="TC19 HTMLTABLE" id="s1" pass="1" fail="0" skip="0">TC19 HTMLTABLE</stat>
 </suite>
 </statistics>
 <errors>
