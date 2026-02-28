@@ -1,30 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-03T21:15:33.479641" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-28T16:25:33.225980" rpa="false" schemaversion="5">
 <suite id="s1" name="Robotframework" source="C:\Users\admin\PycharmProjects\robotframework">
-<suite id="s1-s1" name="Test" source="C:\Users\admin\PycharmProjects\robotframework\test.robot">
-<test id="s1-s1-t1" name="Amazonwebsite" line="9">
+<suite id="s1-s1" name="TestCases" source="C:\Users\admin\PycharmProjects\robotframework\TestCases">
+<suite id="s1-s1-s1" name="TC20 DataDrivenTesting1" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC20_DataDrivenTesting1.robot">
+<kw name="Open_My_Browser1" owner="Login_Resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-03T21:15:35.546669" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<arg>https://demo.nopcommerce.com/</arg>
-<arg>chrome</arg>
+<msg time="2026-02-28T16:25:33.862707" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<arg>${Login_URL}</arg>
+<arg>${Browse}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-03T21:15:35.545956" elapsed="8.967273"/>
+<status status="PASS" start="2026-02-28T16:25:33.861869" elapsed="5.191954"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-28T16:25:39.054938" elapsed="0.355077"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-03T21:15:49.515744" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-02-28T16:25:44.412386" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-03T21:15:44.514016" elapsed="5.002580"/>
+<status status="PASS" start="2026-02-28T16:25:39.410384" elapsed="5.002768"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-03T21:15:49.517081" elapsed="3.501750"/>
+<status status="PASS" start="2026-02-28T16:25:33.859940" elapsed="10.553708"/>
 </kw>
-<status status="PASS" start="2026-02-03T21:15:35.536821" elapsed="17.482662"/>
+<test id="s1-s1-s1-t1" name="Invalid_UserPassword_Input" line="13">
+<kw name="Invalid_Login_Scenario">
+<kw name="Input_User_Name" owner="Login_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-28T16:25:44.430334" level="INFO">Typing text 'admin444@yourstore.com' into text field 'xpath://*[@id="Email"]'.</msg>
+<arg>xpath://*[@id="Email"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-28T16:25:44.429097" elapsed="0.226751"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-02-28T16:25:44.428036" elapsed="0.228136"/>
+</kw>
+<kw name="Input_USE_PWD" owner="Login_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-28T16:25:44.658329" level="INFO">Typing text 'ppoo' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-28T16:25:44.657612" elapsed="0.132302"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-02-28T16:25:44.656622" elapsed="0.133568"/>
+</kw>
+<kw name="Click_Login_button" owner="Login_Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-28T16:25:44.791547" level="INFO">Clicking button 'xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[3]/button'.</msg>
+<arg>xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-28T16:25:44.791121" elapsed="0.795360"/>
+</kw>
+<status status="PASS" start="2026-02-28T16:25:44.790514" elapsed="0.796249"/>
+</kw>
+<kw name="Error_Message_Validation" owner="Login_Resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-28T16:25:45.632145" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-28T16:25:45.587750" elapsed="0.044855"/>
+</kw>
+<status status="PASS" start="2026-02-28T16:25:45.587076" elapsed="0.045784"/>
+</kw>
+<arg>admin444@yourstore.com</arg>
+<arg>ppoo</arg>
+<status status="PASS" start="2026-02-28T16:25:44.426725" elapsed="1.206321"/>
+</kw>
+<status status="PASS" start="2026-02-28T16:25:44.414034" elapsed="1.219289"/>
 </test>
-<status status="PASS" start="2026-02-03T21:15:33.869203" elapsed="19.160292"/>
+<kw name="Close_Browser" owner="Login_Resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-28T16:25:45.637729" elapsed="0.799813"/>
+</kw>
+<status status="PASS" start="2026-02-28T16:25:45.637069" elapsed="0.801995"/>
+</kw>
+<status status="PASS" start="2026-02-28T16:25:33.303163" elapsed="13.136088"/>
 </suite>
-<status status="PASS" start="2026-02-03T21:15:33.694739" elapsed="19.341884"/>
+<status status="PASS" start="2026-02-28T16:25:33.298846" elapsed="13.145127"/>
+</suite>
+<status status="PASS" start="2026-02-28T16:25:33.236676" elapsed="13.214300"/>
 </suite>
 <statistics>
 <total>
@@ -34,7 +92,8 @@
 </tag>
 <suite>
 <stat name="Robotframework" id="s1" pass="1" fail="0" skip="0">Robotframework</stat>
-<stat name="Test" id="s1-s1" pass="1" fail="0" skip="0">Robotframework.Test</stat>
+<stat name="TestCases" id="s1-s1" pass="1" fail="0" skip="0">Robotframework.TestCases</stat>
+<stat name="TC20 DataDrivenTesting1" id="s1-s1-s1" pass="1" fail="0" skip="0">Robotframework.TestCases.TC20 DataDrivenTesting1</stat>
 </suite>
 </statistics>
 <errors>
