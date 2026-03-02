@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Resource    ../Keywords/Login_Resources.robot
 
 #For dataDriven Testing with Excel and Csv we need to install Below Library in Python Environment variable
-#Robotframework-data
+#Robotframework-datadriver
 #For data driven excel you need to run this command to install EXCEL <B>pip install -U robotframework-datadriver[XLS]</B>
 
 Library    DataDriver    ../TestData/TestData.csv
