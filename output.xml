@@ -1,205 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-01T16:46:33.302713" rpa="false" schemaversion="5">
-<suite id="s1" name="TC21 DataDrivenExcel" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC21_DataDrivenExcel.robot">
-<kw name="Open_My_Browser1" owner="Login_Resources" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:35.825132" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
-<arg>${Login_URL}</arg>
-<arg>${Browse}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-03-01T16:46:35.824734" elapsed="10.327939"/>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-03T16:10:13.458345" rpa="false" schemaversion="5">
+<suite id="s1" name="TC25 TaggingGroup" source="C:\Users\admin\PycharmProjects\robotframework\Testcases\TC25_TaggingGroup.robot">
+<test id="s1-t1" name="TC1 User Registratn" line="4">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>This First Test case</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-03T16:10:13.526579" elapsed="0.000595"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-03-01T16:46:46.153196" elapsed="0.519446"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User Registration</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-03T16:10:13.527483" elapsed="0.000448"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-01T16:46:51.674665" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-01T16:46:46.672991" elapsed="5.001922"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:35.823549" elapsed="15.851595"/>
-</kw>
-<test id="s1-t1" name="LoginTestWithExcel using admin@yourstore.com &amp; adm" line="16">
-<kw name="Invalid_Login_scenario_excel">
-<kw name="Input_User_Name" owner="Login_Resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:51.679994" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://*[@id="Email"]'.</msg>
-<arg>xpath://*[@id="Email"]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:46:51.679364" elapsed="0.311203"/>
-</kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-03-01T16:46:51.678903" elapsed="0.311871"/>
-</kw>
-<kw name="Input_USE_PWD" owner="Login_Resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:51.991933" level="INFO">Typing text 'adm' into text field 'id:Password'.</msg>
-<arg>id:Password</arg>
-<arg>${pwd}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:46:51.991536" elapsed="0.118346"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2026-03-01T16:46:51.991040" elapsed="0.119024"/>
-</kw>
-<kw name="Click_Login_button" owner="Login_Resources">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:52.111577" level="INFO">Clicking button 'xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[*]/button'.</msg>
-<arg>xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[*]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:46:52.111166" elapsed="0.921631"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:52.110321" elapsed="0.923525"/>
-</kw>
-<kw name="Error_Message_Validation" owner="Login_Resources">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:53.066143" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-03-01T16:46:53.034633" elapsed="0.031670"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:53.034186" elapsed="0.032281"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-01T16:46:56.067515" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-01T16:46:53.066675" elapsed="3.001020"/>
-</kw>
-<arg>username=admin@yourstore.com</arg>
-<arg>password=adm</arg>
-<status status="PASS" start="2026-03-01T16:46:51.678326" elapsed="4.389532"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:51.675352" elapsed="4.423761"/>
+<tag>sanity</tag>
+<status status="PASS" start="2026-03-03T16:10:13.525450" elapsed="0.002751"/>
 </test>
-<test id="s1-t2" name="LoginTestWithExcel using adm@yourstore.com &amp; admin" line="16">
-<kw name="Invalid_Login_scenario_excel">
-<kw name="Input_User_Name" owner="Login_Resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:56.103149" level="INFO">Typing text 'adm@yourstore.com' into text field 'xpath://*[@id="Email"]'.</msg>
-<arg>xpath://*[@id="Email"]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:46:56.102834" elapsed="0.286934"/>
+<test id="s1-t2" name="TC4 logout test" line="16">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>This is fourth test case</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-03T16:10:13.529156" elapsed="0.000401"/>
 </kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-03-01T16:46:56.102421" elapsed="0.287530"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>This logout testver</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-03T16:10:13.529774" elapsed="0.000373"/>
 </kw>
-<kw name="Input_USE_PWD" owner="Login_Resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:56.390984" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
-<arg>id:Password</arg>
-<arg>${pwd}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:46:56.390693" elapsed="0.165411"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2026-03-01T16:46:56.390208" elapsed="0.166080"/>
-</kw>
-<kw name="Click_Login_button" owner="Login_Resources">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:56.557200" level="INFO">Clicking button 'xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[*]/button'.</msg>
-<arg>xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[*]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:46:56.556945" elapsed="0.963130"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:56.556541" elapsed="0.966015"/>
-</kw>
-<kw name="Error_Message_Validation" owner="Login_Resources">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:46:57.920934" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-03-01T16:46:57.524840" elapsed="0.396246"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:57.523043" elapsed="0.398201"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-01T16:47:00.922410" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-01T16:46:57.921441" elapsed="3.001251"/>
-</kw>
-<arg>username=adm@yourstore.com</arg>
-<arg>password=admin</arg>
-<status status="PASS" start="2026-03-01T16:46:56.101941" elapsed="4.821016"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:56.100248" elapsed="4.823333"/>
+<tag>sanity</tag>
+<status status="PASS" start="2026-03-03T16:10:13.528701" elapsed="0.001685"/>
 </test>
-<test id="s1-t3" name="LoginTestWithExcel using adm123@yourstore.com &amp; adm" line="16">
-<kw name="Invalid_Login_scenario_excel">
-<kw name="Input_User_Name" owner="Login_Resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:47:00.930562" level="INFO">Typing text 'adm123@yourstore.com' into text field 'xpath://*[@id="Email"]'.</msg>
-<arg>xpath://*[@id="Email"]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:47:00.930001" elapsed="0.172727"/>
-</kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-03-01T16:47:00.929212" elapsed="0.173708"/>
-</kw>
-<kw name="Input_USE_PWD" owner="Login_Resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:47:01.104029" level="INFO">Typing text 'adm' into text field 'id:Password'.</msg>
-<arg>id:Password</arg>
-<arg>${pwd}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:47:01.103707" elapsed="0.106207"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2026-03-01T16:47:01.103191" elapsed="0.106921"/>
-</kw>
-<kw name="Click_Login_button" owner="Login_Resources">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:47:01.211401" level="INFO">Clicking button 'xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[*]/button'.</msg>
-<arg>xpath://*[@id="main"]/div/section/div/div[2]/div[1]/div/form/div[*]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-01T16:47:01.210983" elapsed="1.466688"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:47:01.210463" elapsed="1.467388"/>
-</kw>
-<kw name="Error_Message_Validation" owner="Login_Resources">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-03-01T16:47:02.703982" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-03-01T16:47:02.678558" elapsed="0.025576"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:47:02.678112" elapsed="0.026183"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-01T16:47:05.705087" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-01T16:47:02.704497" elapsed="3.000871"/>
-</kw>
-<arg>username=adm123@yourstore.com</arg>
-<arg>password=adm</arg>
-<status status="PASS" start="2026-03-01T16:47:00.928337" elapsed="4.777296"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:47:00.924588" elapsed="4.781699"/>
-</test>
-<kw name="Close_Browser" owner="Login_Resources" type="TEARDOWN">
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-03-01T16:47:05.710431" elapsed="2.952157"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:47:05.709905" elapsed="2.952980"/>
-</kw>
-<status status="PASS" start="2026-03-01T16:46:33.306066" elapsed="35.356955"/>
+<status status="PASS" start="2026-03-03T16:10:13.461728" elapsed="0.069357"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="0" skip="0">sanity</stat>
 </tag>
 <suite>
-<stat name="TC21 DataDrivenExcel" id="s1" pass="3" fail="0" skip="0">TC21 DataDrivenExcel</stat>
+<stat name="TC25 TaggingGroup" id="s1" pass="2" fail="0" skip="0">TC25 TaggingGroup</stat>
 </suite>
 </statistics>
 <errors>
