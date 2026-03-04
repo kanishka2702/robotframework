@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-03T16:10:13.458345" rpa="false" schemaversion="5">
-<suite id="s1" name="TC25 TaggingGroup" source="C:\Users\admin\PycharmProjects\robotframework\Testcases\TC25_TaggingGroup.robot">
-<test id="s1-t1" name="TC1 User Registratn" line="4">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>This First Test case</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-03T16:10:13.526579" elapsed="0.000595"/>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-04T15:47:39.829047" rpa="false" schemaversion="5">
+<suite id="s1" name="TC23 DBTEST" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC23_DBTEST.robot">
+<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
+<msg time="2026-03-04T15:47:40.046141" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-03-04T15:47:40.046322" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-03-04T15:47:40.508716" level="INFO">Connect to DB using : pymysql.connect(db='mydb', user=***, passwd=***, host='127.0.0.1', port=3306, charset='utf8mb4')</msg>
+<msg time="2026-03-04T15:47:43.330404" level="FAIL">OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</msg>
+<arg>pymysql</arg>
+<arg>${DBname}</arg>
+<arg>${DBuser}</arg>
+<arg>${DBpwd}</arg>
+<arg>${DBhost}</arg>
+<arg>${DBport}</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="FAIL" start="2026-03-04T15:47:40.044772" elapsed="3.595810">OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>User Registration</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-03T16:10:13.527483" elapsed="0.000448"/>
-</kw>
-<tag>sanity</tag>
-<status status="PASS" start="2026-03-03T16:10:13.525450" elapsed="0.002751"/>
+<test id="s1-t1" name="Create Person Table" line="16">
+<status status="FAIL" start="2026-03-04T15:47:43.643949" elapsed="0.001337">Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
 </test>
-<test id="s1-t2" name="TC4 logout test" line="16">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>This is fourth test case</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-03T16:10:13.529156" elapsed="0.000401"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>This logout testver</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-03T16:10:13.529774" elapsed="0.000373"/>
-</kw>
-<tag>sanity</tag>
-<status status="PASS" start="2026-03-03T16:10:13.528701" elapsed="0.001685"/>
+<test id="s1-t2" name="Inserting Data in Person table" line="21">
+<status status="FAIL" start="2026-03-04T15:47:43.649314" elapsed="0.000726">Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
 </test>
-<status status="PASS" start="2026-03-03T16:10:13.461728" elapsed="0.069357"/>
+<kw name="Disconnect From Database" owner="DatabaseLibrary" type="TEARDOWN">
+<msg time="2026-03-04T15:47:43.651824" level="INFO">No open database connection to close</msg>
+<doc>Disconnects from the database.</doc>
+<status status="PASS" start="2026-03-04T15:47:43.651582" elapsed="0.000351"/>
+</kw>
+<status status="FAIL" start="2026-03-04T15:47:39.833205" elapsed="3.820533">Suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">sanity</stat>
 </tag>
 <suite>
-<stat name="TC25 TaggingGroup" id="s1" pass="2" fail="0" skip="0">TC25 TaggingGroup</stat>
+<stat name="TC23 DBTEST" id="s1" pass="0" fail="2" skip="0">TC23 DBTEST</stat>
 </suite>
 </statistics>
 <errors>
