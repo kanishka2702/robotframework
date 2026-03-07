@@ -1,0 +1,20 @@
+#login page elements
+txt_LoginUserName="name:userName"
+txt_LoginPassword="name:password"
+btn_signIn="xpath://input[@name='submit']"
+txt_logintext= "xpath://b[normalize-space()='Thank you for Loggin.']"
+
+#Registry page elements
+register_link="link:REGISTER"
+txt_firstname="name:firstName"
+txt_lastname="name:lastName"
+txt_phone="nam:phone"
+txt_email="xpath://input[@id='userName']"
+txt_address="name:address1"
+txt_city="name:city"
+txt_state="nam:state"
+dropdown_country="name:state"
+txt_username_input="xpath://input[@id='email']"
+txt_password_input="xpath://input[@name='password']"
+txt_Confirm_password="xpath://input[@name='confirmPassword']"
+button_submit="xpath://input[@name='submit']"

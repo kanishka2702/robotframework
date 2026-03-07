@@ -1,46 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-04T15:47:39.829047" rpa="false" schemaversion="5">
-<suite id="s1" name="TC23 DBTEST" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC23_DBTEST.robot">
-<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
-<msg time="2026-03-04T15:47:40.046141" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
-<msg time="2026-03-04T15:47:40.046322" level="INFO">Configuration file doesn't exist</msg>
-<msg time="2026-03-04T15:47:40.508716" level="INFO">Connect to DB using : pymysql.connect(db='mydb', user=***, passwd=***, host='127.0.0.1', port=3306, charset='utf8mb4')</msg>
-<msg time="2026-03-04T15:47:43.330404" level="FAIL">OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</msg>
-<arg>pymysql</arg>
-<arg>${DBname}</arg>
-<arg>${DBuser}</arg>
-<arg>${DBpwd}</arg>
-<arg>${DBhost}</arg>
-<arg>${DBport}</arg>
-<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
-Along with listed commonly used arguments (`db_name`, `db_host` etc.)
-you can set any other DB module specific parameters as key/value pairs.</doc>
-<status status="FAIL" start="2026-03-04T15:47:40.044772" elapsed="3.595810">OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-07T16:58:43.978970" rpa="false" schemaversion="5">
+<suite id="s1" name="TC26 POM LoginMercury" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC26_POM_LoginMercury.robot">
+<test id="s1-t1" name="Login_Test" line="12">
+<kw name="Open_My_Browser" owner="LoginKeyWords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-07T16:58:44.652225" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-07T16:58:44.651801" elapsed="13.533065"/>
 </kw>
-<test id="s1-t1" name="Create Person Table" line="16">
-<status status="FAIL" start="2026-03-04T15:47:43.643949" elapsed="0.001337">Parent suite setup failed:
-OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
-</test>
-<test id="s1-t2" name="Inserting Data in Person table" line="21">
-<status status="FAIL" start="2026-03-04T15:47:43.649314" elapsed="0.000726">Parent suite setup failed:
-OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
-</test>
-<kw name="Disconnect From Database" owner="DatabaseLibrary" type="TEARDOWN">
-<msg time="2026-03-04T15:47:43.651824" level="INFO">No open database connection to close</msg>
-<doc>Disconnects from the database.</doc>
-<status status="PASS" start="2026-03-04T15:47:43.651582" elapsed="0.000351"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-07T16:58:58.186680" elapsed="0.116139"/>
 </kw>
-<status status="FAIL" start="2026-03-04T15:47:39.833205" elapsed="3.820533">Suite setup failed:
-OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<status status="PASS" start="2026-03-07T16:58:44.649120" elapsed="13.654328"/>
+</kw>
+<kw name="Enter_User_Name" owner="LoginKeyWords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-07T16:58:58.309270" level="INFO">Typing text 'admin' into text field 'name:userName'.</msg>
+<arg>${txt_LoginUserName}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-07T16:58:58.308021" elapsed="0.380509"/>
+</kw>
+<arg>${user}</arg>
+<status status="PASS" start="2026-03-07T16:58:58.306267" elapsed="0.382483"/>
+</kw>
+<kw name="Enter_Password" owner="LoginKeyWords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-07T16:58:58.690511" level="INFO">Typing text 'admin' into text field 'name:password'.</msg>
+<arg>${txt_LoginPassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-07T16:58:58.689936" elapsed="0.124822"/>
+</kw>
+<arg>${Password}</arg>
+<status status="PASS" start="2026-03-07T16:58:58.689276" elapsed="0.125744"/>
+</kw>
+<kw name="Click_SignIn_Button" owner="LoginKeyWords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-07T16:58:58.816321" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
+<arg>${btn_signIn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-07T16:58:58.816009" elapsed="1.794435"/>
+</kw>
+<status status="PASS" start="2026-03-07T16:58:58.815573" elapsed="1.795045"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-07T16:59:03.619800" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-07T16:59:00.618634" elapsed="3.001435"/>
+</kw>
+<kw name="Verify_Successfull_Login" owner="LoginKeyWords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-07T16:59:03.622219" level="INFO">Verifying element 'xpath://b[normalize-space()='Thank you for Loggin.']' contains exact text 'Thank you for Loggin.'.</msg>
+<arg>${txt_logintext}</arg>
+<arg>Thank you for Loggin.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-03-07T16:59:03.621623" elapsed="0.071148"/>
+</kw>
+<status status="PASS" start="2026-03-07T16:59:03.620889" elapsed="0.072071"/>
+</kw>
+<kw name="Close_My_Browser" owner="LoginKeyWords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-07T16:59:03.694314" elapsed="2.496975"/>
+</kw>
+<status status="PASS" start="2026-03-07T16:59:03.693906" elapsed="2.497687"/>
+</kw>
+<status status="PASS" start="2026-03-07T16:58:44.647993" elapsed="21.544216"/>
+</test>
+<status status="PASS" start="2026-03-07T16:58:43.982326" elapsed="22.211469"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TC23 DBTEST" id="s1" pass="0" fail="2" skip="0">TC23 DBTEST</stat>
+<stat name="TC26 POM LoginMercury" id="s1" pass="1" fail="0" skip="0">TC26 POM LoginMercury</stat>
 </suite>
 </statistics>
 <errors>
