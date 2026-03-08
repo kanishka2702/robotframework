@@ -1,0 +1,6 @@
+datasources:48bcd22a4ede6722c5d1d2d3829b12e4394d2e10
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:103a12d41e1d3ddef75ef993526fe0b24ee996d4
+--suite Suites.TC1 inputbox1
+--suite Suites.TC26 POM LoginMercury1

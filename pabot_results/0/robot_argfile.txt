@@ -1,0 +1,19 @@
+--name Suites
+--suite Suites.TC1 inputbox1
+--variable CALLER_ID:3595d537e95a4b83a3689ff4a9ff42a1
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:0
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:3
+--variable PABOTQUEUEINDEX:0
+--variable PABOTLASTLEVEL:Suites.TC1 inputbox1
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\0
+--consolecolors off
+--consolemarkers off
+TestCases1\TC1_inputbox1.robot
+TestCases1\TC26_POM_LoginMercury1.robot
+TestCases1\TC27_POM_Registration1.robot

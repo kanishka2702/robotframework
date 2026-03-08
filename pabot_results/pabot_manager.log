@@ -1,0 +1,30 @@
+[INFO]    Initialized logging in .\pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   2026-03-08 16:15:20.472240 [PID:6228] [2] [ID:2] EXECUTING Suites.TC27 POM Registration1
+[DEBUG]   2026-03-08 16:15:20.477348 [PID:15972] [0] [ID:0] EXECUTING Suites.TC1 inputbox1
+[DEBUG]   2026-03-08 16:15:20.483633 [PID:2444] [1] [ID:1] EXECUTING Suites.TC26 POM LoginMercury1
+[DEBUG]   2026-03-08 16:15:25.938568 [PID:15972] [0] [ID:0] still running Suites.TC1 inputbox1 after 5.0s
+[DEBUG]   2026-03-08 16:15:26.379335 [PID:6228] [2] [ID:2] still running Suites.TC27 POM Registration1 after 5.0s
+[DEBUG]   2026-03-08 16:15:26.379522 [PID:2444] [1] [ID:1] still running Suites.TC26 POM LoginMercury1 after 5.0s
+[DEBUG]   2026-03-08 16:15:41.100903 [PID:15972] [0] [ID:0] still running Suites.TC1 inputbox1 after 15.0s
+[DEBUG]   2026-03-08 16:15:41.101356 [PID:6228] [2] [ID:2] still running Suites.TC27 POM Registration1 after 15.0s
+[DEBUG]   2026-03-08 16:15:41.101460 [PID:2444] [1] [ID:1] still running Suites.TC26 POM LoginMercury1 after 15.0s
+[DEBUG]   2026-03-08 16:15:58.949658 [PID:6228] [2] [ID:2] still running Suites.TC27 POM Registration1 after 30.0s
+[DEBUG]   2026-03-08 16:15:58.949787 [PID:2444] [1] [ID:1] still running Suites.TC26 POM LoginMercury1 after 30.0s
+[DEBUG]   2026-03-08 16:15:58.949861 [PID:15972] [0] [ID:0] still running Suites.TC1 inputbox1 after 30.0s
+[INFO]    2026-03-08 16:16:02.203865 [PID:2444] [1] [ID:1] PASSED Suites.TC26 POM LoginMercury1 in 41.7 seconds
+[INFO]    2026-03-08 16:16:10.484356 [PID:15972] [0] [ID:0] PASSED Suites.TC1 inputbox1 in 50.0 seconds
+[DEBUG]   2026-03-08 16:16:19.810346 [PID:6228] [2] [ID:2] still running Suites.TC27 POM Registration1 after 50.0s
+[INFO]    2026-03-08 16:16:21.560708 [PID:6228] [2] [ID:2] PASSED Suites.TC27 POM Registration1 in 61.1 seconds
+[INFO]    3 tests, 3 passed, 0 failed, 0 skipped.
+[INFO]    ===================================================
+[INFO]    Output:  C:\Users\admin\PycharmProjects\robotframework\output.xml
+[INFO]    Log:     C:\Users\admin\PycharmProjects\robotframework\log.html
+[INFO]    Report:  C:\Users\admin\PycharmProjects\robotframework\report.html
+[DEBUG]   Finalizing Pabot execution...
+[DEBUG]   Stopping PabotLib process
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 stopped.
+[DEBUG]   PabotLib process stopped
+[INFO]    Total testing: 2 minutes 32.80 seconds
+[INFO]    Elapsed time:  1 minute 2.74 seconds
+[DEBUG]   Logs flushed successfully.
