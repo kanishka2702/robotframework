@@ -1,68 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-09T16:43:48.510116" rpa="false" schemaversion="5">
-<suite id="s1" name="TC28 DropdownDataValidation" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC28_DropdownDataValidation.robot">
-<test id="s1-t1" name="Get_Dropdown_Values" line="6">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-10T15:13:34.239949" rpa="false" schemaversion="5">
+<suite id="s1" name="TC29 POM DropdownValidation" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC29_POM_DropdownValidation.robot">
+<test id="s1-t1" name="Verify Dropdown Values" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-03-09T16:43:48.948983" level="INFO">Opening browser 'chrome' to base url 'https://automationtesting.co.uk/dropdown.html'.</msg>
+<msg time="2026-03-10T15:13:34.701533" level="INFO">Opening browser 'chrome' to base url 'https://automationtesting.co.uk/dropdown.html'.</msg>
 <arg>https://automationtesting.co.uk/dropdown.html</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-03-09T16:43:48.948606" elapsed="5.033211"/>
+<status status="PASS" start="2026-03-10T15:13:34.701147" elapsed="4.434208"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-03-09T16:43:53.982363" elapsed="0.141895"/>
+<status status="PASS" start="2026-03-10T15:13:39.137733" elapsed="0.159901"/>
+</kw>
+<kw name="Get_Drop_Down_Values_and_Compare" owner="UserDefineKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${selectors}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-10T15:13:39.303468" elapsed="0.346895"/>
 </kw>
 <kw name="Get List Items" owner="SeleniumLibrary">
-<msg time="2026-03-09T16:43:54.339444" level="INFO">${options} = ['Audi', 'BMW', 'Ford', 'Honda', 'Jeep', 'Mercedes', 'Suzuki', 'Volkswagen']</msg>
+<msg time="2026-03-10T15:13:39.829427" level="INFO">${options} = ['Audi', 'BMW', 'Ford', 'Honda', 'Jeep', 'Mercedes', 'Suzuki', 'Volkswagen']</msg>
 <var>${options}</var>
-<arg>id=cars</arg>
+<arg>${selectors}</arg>
 <doc>Returns all labels or values of selection list ``locator``.</doc>
-<status status="PASS" start="2026-03-09T16:43:54.142565" elapsed="0.196966"/>
+<status status="PASS" start="2026-03-10T15:13:39.650790" elapsed="0.178728"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${options}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-09T16:43:54.339924" elapsed="0.000636"/>
-</kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-03-09T16:43:54.341392" level="INFO">@{expected} = [ Audi | BMW | Ford | Honda | Jeep | Mercedes | Suzuki | Volkswagen ]</msg>
-<var>@{expected}</var>
-<arg>Audi</arg>
-<arg>BMW</arg>
-<arg>Ford</arg>
-<arg>Honda</arg>
-<arg>Jeep</arg>
-<arg>Mercedes</arg>
-<arg>Suzuki</arg>
-<arg>Volkswagen</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-03-09T16:43:54.340837" elapsed="0.000609"/>
+<status status="PASS" start="2026-03-10T15:13:39.829766" elapsed="0.000649"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${expected} this is Expected list forcomparing</arg>
+<arg>${expected} This is expected outcome for comparision</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-09T16:43:54.341764" elapsed="0.000510"/>
+<status status="PASS" start="2026-03-10T15:13:39.830624" elapsed="0.012584"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-09T16:43:54.343417" level="INFO">${are_equal_as_sets} = True</msg>
-<var>${are_equal_as_sets}</var>
-<arg>set(${options}) == set(${expected})</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-09T16:43:54.342537" elapsed="0.000936"/>
+<kw name="Lists Should Be Equal" owner="Collections">
+<arg>${options}</arg>
+<arg>${expected}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="PASS" start="2026-03-10T15:13:39.844163" elapsed="0.000994"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${are_equal_as_sets}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-09T16:43:54.343751" elapsed="0.000448"/>
+<arg>id=cars</arg>
+<arg>${DropDownList}</arg>
+<status status="PASS" start="2026-03-10T15:13:39.301949" elapsed="0.543414"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-10T15:13:44.846908" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-10T15:13:39.845859" elapsed="5.001273"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-03-09T16:43:54.344501" elapsed="2.343854"/>
+<status status="PASS" start="2026-03-10T15:13:44.847612" elapsed="0.803678"/>
 </kw>
-<status status="PASS" start="2026-03-09T16:43:48.946863" elapsed="7.742523"/>
+<status status="PASS" start="2026-03-10T15:13:34.699211" elapsed="10.955493"/>
 </test>
-<status status="PASS" start="2026-03-09T16:43:48.513691" elapsed="8.178263"/>
+<status status="PASS" start="2026-03-10T15:13:34.245788" elapsed="11.415429"/>
 </suite>
 <statistics>
 <total>
@@ -71,9 +67,10 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC28 DropdownDataValidation" id="s1" pass="1" fail="0" skip="0">TC28 DropdownDataValidation</stat>
+<stat name="TC29 POM DropdownValidation" id="s1" pass="1" fail="0" skip="0">TC29 POM DropdownValidation</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-03-10T15:13:34.696986" level="ERROR">Error in file 'C:\Users\admin\PycharmProjects\robotframework\Keywords\Constants.robot' on line 3: Library 'Collections' expected 0 arguments, got 1.</msg>
 </errors>
 </robot>

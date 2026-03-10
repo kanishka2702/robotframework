@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    Collections
 
 *** Keywords ***
 #LaunchBrowser
@@ -18,3 +19,11 @@ LaunchBrowser2
     Maximize Browser Window
     ${title}=    Get Title
     RETURN    ${title}
+
+Get_Drop_Down_Values_and_Compare
+    [Arguments]    ${selectors}    ${expected}
+    Wait Until Element Is Visible    ${selectors}
+    ${options}=    Get List Items    ${selectors}
+    Log To Console    ${options}
+    Log To Console    ${expected} This is expected outcome for comparision
+    Lists Should Be Equal    ${options}    ${expected}

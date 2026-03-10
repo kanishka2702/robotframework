@@ -10,6 +10,7 @@ Get_Dropdown_Values
 
     Log To Console    ${options}
 
+    # @ is used to create list
     @{expected}=    Create List    Audi    BMW    Ford    Honda    Jeep    Mercedes    Suzuki    Volkswagen
     Log To Console    ${expected} this is Expected list forcomparing
 
