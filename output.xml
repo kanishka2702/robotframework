@@ -1,64 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-10T15:13:34.239949" rpa="false" schemaversion="5">
-<suite id="s1" name="TC29 POM DropdownValidation" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC29_POM_DropdownValidation.robot">
-<test id="s1-t1" name="Verify Dropdown Values" line="11">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-11T17:50:08.593734" rpa="false" schemaversion="5">
+<suite id="s1" name="TC30 HeadLessBrowser" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC30_HeadLessBrowser.robot">
+<test id="s1-t1" name="Login_Test" line="12">
+<kw name="Open_My_Browser" owner="LoginKeyWords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-03-10T15:13:34.701533" level="INFO">Opening browser 'chrome' to base url 'https://automationtesting.co.uk/dropdown.html'.</msg>
-<arg>https://automationtesting.co.uk/dropdown.html</arg>
-<arg>chrome</arg>
+<msg time="2026-03-11T17:50:09.891000" level="INFO">Opening browser 'headlesschrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-03-10T15:13:34.701147" elapsed="4.434208"/>
+<status status="PASS" start="2026-03-11T17:50:09.890601" elapsed="10.153558"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-03-10T15:13:39.137733" elapsed="0.159901"/>
+<status status="PASS" start="2026-03-11T17:50:20.045970" elapsed="0.082986"/>
 </kw>
-<kw name="Get_Drop_Down_Values_and_Compare" owner="UserDefineKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${selectors}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-03-10T15:13:39.303468" elapsed="0.346895"/>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<status status="PASS" start="2026-03-11T17:50:09.888383" elapsed="10.240797"/>
 </kw>
-<kw name="Get List Items" owner="SeleniumLibrary">
-<msg time="2026-03-10T15:13:39.829427" level="INFO">${options} = ['Audi', 'BMW', 'Ford', 'Honda', 'Jeep', 'Mercedes', 'Suzuki', 'Volkswagen']</msg>
-<var>${options}</var>
-<arg>${selectors}</arg>
-<doc>Returns all labels or values of selection list ``locator``.</doc>
-<status status="PASS" start="2026-03-10T15:13:39.650790" elapsed="0.178728"/>
+<kw name="Enter_User_Name" owner="LoginKeyWords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-11T17:50:20.198199" level="INFO">Typing text 'admin' into text field 'name:userName'.</msg>
+<arg>${txt_LoginUserName}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T17:50:20.197545" elapsed="0.396369"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${options}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-10T15:13:39.829766" elapsed="0.000649"/>
+<arg>${user}</arg>
+<status status="PASS" start="2026-03-11T17:50:20.196891" elapsed="0.397236"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${expected} This is expected outcome for comparision</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-10T15:13:39.830624" elapsed="0.012584"/>
+<kw name="Enter_Password" owner="LoginKeyWords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-11T17:50:20.595450" level="INFO">Typing text 'admin' into text field 'name:password'.</msg>
+<arg>${txt_LoginPassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T17:50:20.595086" elapsed="0.399026"/>
 </kw>
-<kw name="Lists Should Be Equal" owner="Collections">
-<arg>${options}</arg>
-<arg>${expected}</arg>
-<doc>Fails if given lists are unequal.</doc>
-<status status="PASS" start="2026-03-10T15:13:39.844163" elapsed="0.000994"/>
+<arg>${Password}</arg>
+<status status="PASS" start="2026-03-11T17:50:20.594581" elapsed="0.399880"/>
 </kw>
-<arg>id=cars</arg>
-<arg>${DropDownList}</arg>
-<status status="PASS" start="2026-03-10T15:13:39.301949" elapsed="0.543414"/>
+<kw name="Click_SignIn_Button" owner="LoginKeyWords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-11T17:50:20.996494" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
+<arg>${btn_signIn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T17:50:20.996005" elapsed="2.020962"/>
+</kw>
+<status status="PASS" start="2026-03-11T17:50:20.995323" elapsed="2.021823"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-10T15:13:44.846908" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
+<msg time="2026-03-11T17:50:26.018648" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-10T15:13:39.845859" elapsed="5.001273"/>
+<status status="PASS" start="2026-03-11T17:50:23.017696" elapsed="3.001224"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-03-10T15:13:44.847612" elapsed="0.803678"/>
+<kw name="Verify_Successfull_Login" owner="LoginKeyWords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-11T17:50:26.021292" level="INFO">Verifying element 'xpath://b[normalize-space()='Thank you for Loggin.']' contains exact text 'Thank you for Loggin.'.</msg>
+<arg>${txt_logintext}</arg>
+<arg>Thank you for Loggin.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-03-11T17:50:26.020531" elapsed="0.063907"/>
 </kw>
-<status status="PASS" start="2026-03-10T15:13:34.699211" elapsed="10.955493"/>
+<status status="PASS" start="2026-03-11T17:50:26.019752" elapsed="0.064869"/>
+</kw>
+<kw name="Close_My_Browser" owner="LoginKeyWords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-11T17:50:26.085472" elapsed="3.240001"/>
+</kw>
+<status status="PASS" start="2026-03-11T17:50:26.085052" elapsed="3.240701"/>
+</kw>
+<status status="PASS" start="2026-03-11T17:50:09.886568" elapsed="19.439831"/>
 </test>
-<status status="PASS" start="2026-03-10T15:13:34.245788" elapsed="11.415429"/>
+<status status="PASS" start="2026-03-11T17:50:08.597812" elapsed="20.732371"/>
 </suite>
 <statistics>
 <total>
@@ -67,10 +83,9 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC29 POM DropdownValidation" id="s1" pass="1" fail="0" skip="0">TC29 POM DropdownValidation</stat>
+<stat name="TC30 HeadLessBrowser" id="s1" pass="1" fail="0" skip="0">TC30 HeadLessBrowser</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-03-10T15:13:34.696986" level="ERROR">Error in file 'C:\Users\admin\PycharmProjects\robotframework\Keywords\Constants.robot' on line 3: Library 'Collections' expected 0 arguments, got 1.</msg>
 </errors>
 </robot>

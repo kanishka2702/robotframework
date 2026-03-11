@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-11T15:01:28.654885" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="TC1 inputbox1" source="C:\Users\admin\PycharmProjects\robotframework\TestCases1\TC1_inputbox1.robot">
+<test id="s1-s1-t1" name="Login_InputBox" line="11">
+<kw name="OpenBrowser1">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:00:53.029699" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-11T15:00:53.029184" elapsed="17.383678"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-11T15:01:10.413324" elapsed="1.149199"/>
+</kw>
+<status status="PASS" start="2026-03-11T15:00:53.025455" elapsed="18.537302"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:11.707549" level="INFO">Page title is 'Swag Labs'.</msg>
+<arg>Swag Labs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-03-11T15:01:11.562981" elapsed="0.144725"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-11T15:01:12.710486" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-11T15:01:11.707957" elapsed="1.002859"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:12.712061" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<arg>${Login_Input_Box}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:12.711190" elapsed="0.686755"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:13.398609" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${Passwod_Input_Box}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:13.398228" elapsed="0.462360"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-11T15:01:16.861667" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-11T15:01:13.860922" elapsed="3.000938"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${Login_Input_Box}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:16.862154" elapsed="0.396973"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-11T15:01:20.260641" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-11T15:01:17.259443" elapsed="3.001437"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:20.261655" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<arg>${Login_Input_Box}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:20.261201" elapsed="0.141971"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:20.403887" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
+<arg>xpath://input[@id='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:20.403511" elapsed="0.782525"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-11T15:01:24.187005" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-11T15:01:21.186334" elapsed="3.000941"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-11T15:01:24.187699" elapsed="4.116298"/>
+</kw>
+<status status="PASS" start="2026-03-11T15:00:53.024174" elapsed="35.280381"/>
+</test>
+<status status="PASS" start="2026-03-11T15:00:51.787000" elapsed="35.280000"/>
+</suite>
+<suite id="s1-s2" name="TC26 POM LoginMercury1" source="C:\Users\admin\PycharmProjects\robotframework\TestCases1\TC26_POM_LoginMercury1.robot">
+<test id="s1-s2-t1" name="Login_Test" line="12">
+<kw name="Open_My_Browser" owner="LoginKeyWords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:00:53.034290" level="INFO">Opening browser 'headlesschrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-11T15:00:53.033774" elapsed="15.330395"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-11T15:01:08.364675" elapsed="0.622416"/>
+</kw>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<status status="PASS" start="2026-03-11T15:00:53.032104" elapsed="15.955260"/>
+</kw>
+<kw name="Enter_User_Name" owner="LoginKeyWords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:08.989500" level="INFO">Typing text 'admin' into text field 'name:userName'.</msg>
+<arg>${txt_LoginUserName}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:08.988370" elapsed="2.532783"/>
+</kw>
+<arg>${user}</arg>
+<status status="PASS" start="2026-03-11T15:01:08.987778" elapsed="2.533574"/>
+</kw>
+<kw name="Enter_Password" owner="LoginKeyWords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:11.522446" level="INFO">Typing text 'admin' into text field 'name:password'.</msg>
+<arg>${txt_LoginPassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:11.522107" elapsed="0.574551"/>
+</kw>
+<arg>${Password}</arg>
+<status status="PASS" start="2026-03-11T15:01:11.521630" elapsed="0.575271"/>
+</kw>
+<kw name="Click_SignIn_Button" owner="LoginKeyWords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:12.098145" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
+<arg>${btn_signIn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-11T15:01:12.097766" elapsed="1.967454"/>
+</kw>
+<status status="PASS" start="2026-03-11T15:01:12.097254" elapsed="1.968176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-11T15:01:17.066951" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-11T15:01:14.065669" elapsed="3.001540"/>
+</kw>
+<kw name="Verify_Successfull_Login" owner="LoginKeyWords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-11T15:01:17.069238" level="INFO">Verifying element 'xpath://b[normalize-space()='Thank you for Loggin.']' contains exact text 'Thank you for Loggin.'.</msg>
+<arg>${txt_logintext}</arg>
+<arg>Thank you for Loggin.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-03-11T15:01:17.068605" elapsed="0.243932"/>
+</kw>
+<status status="PASS" start="2026-03-11T15:01:17.067786" elapsed="0.244937"/>
+</kw>
+<kw name="Close_My_Browser" owner="LoginKeyWords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-11T15:01:17.313454" elapsed="2.510993"/>
+</kw>
+<status status="PASS" start="2026-03-11T15:01:17.312996" elapsed="2.511756"/>
+</kw>
+<status status="PASS" start="2026-03-11T15:00:53.031065" elapsed="26.794088"/>
+</test>
+<status status="PASS" start="2026-03-11T15:00:51.847173" elapsed="27.979211"/>
+</suite>
+<status status="PASS" start="2026-03-11T15:00:51.711000" elapsed="35.280000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Suites" id="s1" pass="2" fail="0" skip="0">Suites</stat>
+<stat name="TC1 inputbox1" id="s1-s1" pass="1" fail="0" skip="0">Suites.TC1 inputbox1</stat>
+<stat name="TC26 POM LoginMercury1" id="s1-s2" pass="1" fail="0" skip="0">Suites.TC26 POM LoginMercury1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
