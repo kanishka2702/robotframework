@@ -27,3 +27,12 @@ Get_Drop_Down_Values_and_Compare
     Log To Console    ${options}
     Log To Console    ${expected} This is expected outcome for comparision
     Lists Should Be Equal    ${options}    ${expected}
+
+TC31Select Option From Dropdown
+    [Documentation]    Reusable keyword to select option from any dropdown.
+    ...                Usage:
+    ...                Select Option From Dropdown    id:country    India
+    ...                Select Option From Dropdown    xpath=//select[@name="state"]    Maharashtra
+    [Arguments]    ${locator}    ${option_text}
+    Wait Until Element Is Visible    ${locator}    10s
+    Select From List By Label        ${locator}    ${option_text}
