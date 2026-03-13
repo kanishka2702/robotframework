@@ -25,3 +25,9 @@ Invalid_Login_scenario_excel
     Error_Message_Validation
     Sleep    3
 
+#Install via pip install robotframework-datadriver[XLS] to support Excel (.xlsx/.xls).
+ #​
+ #Import in *** Settings ***: Library DataDriver file=yourfile.xlsx sheet_name=Sheet1.
+ #Define one template test case with Test Template YourKeyword, where YourKeyword matches Excel column headers (e.g., ${username}, ${password}) as arguments.
+ #​
+ #DataDriver generates multiple test cases dynamically from Excel rows; first column *** Test Cases *** names them optionally.

@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Variables    ../PageOjects/Locators.py
 
+
 *** Keywords ***
 Open_My_Browser
     [Arguments]    ${SiteUrl}    ${Browser}
@@ -12,8 +13,8 @@ Enter_User_Name
     Input Text    ${txt_LoginUserName}    ${UserName}
 
 Enter_Password
-    [Arguments]    ${Password}
-    Input Text    ${txt_LoginPassword}    ${Password}
+    [Arguments]    ${PassWord}
+    Input Text    ${txt_LoginPassword}    ${PassWord}
 
 Click_SignIn_Button
     Click Button    ${btn_signIn}
@@ -24,6 +25,9 @@ Verify_Successfull_Login
 
 Close_My_Browser
     Close All Browsers
+
+Click_signoff
+    Click Link    ${txt_Signoff}
 
 
 

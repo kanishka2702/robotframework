@@ -3,6 +3,7 @@ txt_LoginUserName="name:userName"
 txt_LoginPassword="name:password"
 btn_signIn="xpath://input[@name='submit']"
 txt_logintext= "xpath://b[normalize-space()='Thank you for Loggin.']"
+txt_Signoff="xpath://a[normalize-space()='SIGN-OFF']"
 
 #Registry page elements
 register_link="link:REGISTER"
