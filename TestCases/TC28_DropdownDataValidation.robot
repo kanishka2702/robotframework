@@ -19,6 +19,8 @@ Get_Dropdown_Values
     ${are_equal_as_sets}=    Evaluate    set(${options}) == set(${expected})  #this will be ed when don't want to follow order/Sequence in Dropdown
     Should Be True    ${are_equal_as_sets}
 
+    Should Be Equal    ${options}    ${expected}
+
 
     Close Browser
 
