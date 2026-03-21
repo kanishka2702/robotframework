@@ -24,5 +24,3 @@ Login_With_Valid_Credentials
     Alert Should Not Be Present    action=accept    timeout=5s
     Verify_Successfull_Login
     Click_signoff
-
-
