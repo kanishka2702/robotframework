@@ -1,317 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-21T15:31:05.847326" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCaseSuite init" source="C:\Users\admin\PycharmProjects\robotframework\TestCaseSuite_init">
-<kw name="Login" type="SETUP">
-<kw name="Read Credentials From Excel" owner="ExcelReader">
-<msg time="2026-03-21T15:31:06.900921" level="INFO">${username} = admin1</msg>
-<msg time="2026-03-21T15:31:06.901044" level="INFO">${password} = admin1</msg>
-<var>${username}</var>
-<var>${password}</var>
-<arg>C:/Users/admin/PycharmProjects/robotframework/TestData/LoginData.xlsx</arg>
-<doc>Reads username and password from Excel.
-Expects headers in row 1: username | password
-Reads data from row 2</doc>
-<status status="PASS" start="2026-03-21T15:31:06.886347" elapsed="0.014761"/>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-22T16:24:32.054529" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 1 ReadExcel ReturnList" source="C:\Users\admin\PycharmProjects\robotframework\ReadExcel_TC\TC_1_ReadExcel_ReturnList.robot">
+<test id="s1-t1" name="Read data from excel and return list" line="11">
+<kw name="Get Excel Data In List" owner="ExcelRead_Keywords">
+<kw name="Get Excel Data List" owner="utils">
+<msg time="2026-03-22T16:24:32.900699" level="INFO">${data} = [{'username': 'admin1', 'password': 'admin12pwd'}]</msg>
+<var>${data}</var>
+<arg>${file_path}</arg>
+<arg>${sheet_name}</arg>
+<status status="PASS" start="2026-03-22T16:24:32.881079" elapsed="0.019712"/>
 </kw>
-<kw name="Open_My_Browser" owner="LoginKeyWords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:06.902244" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
-<arg>${SiteUrl}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-03-21T15:31:06.901879" elapsed="5.086611"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-22T16:24:32.901083" elapsed="0.001615"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-03-21T15:31:11.988786" elapsed="0.167742"/>
+<return>
+<value>${data}</value>
+<status status="PASS" start="2026-03-22T16:24:32.902964" elapsed="0.000152"/>
+</return>
+<msg time="2026-03-22T16:24:32.903414" level="INFO">${get_data} = [{'username': 'admin1', 'password': 'admin12pwd'}]</msg>
+<var>${get_data}</var>
+<arg>${file_path1}</arg>
+<arg>${sheet_name1}</arg>
+<doc>Reads data from an Excel file and returns it as a list of dictionaries</doc>
+<status status="PASS" start="2026-03-22T16:24:32.879543" elapsed="0.023931"/>
 </kw>
-<arg>https://demo.guru99.com/test/newtours/</arg>
-<arg>chrome</arg>
-<status status="PASS" start="2026-03-21T15:31:06.901460" elapsed="5.255396"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${get_data} this the data</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-22T16:24:32.903836" elapsed="0.000600"/>
 </kw>
-<kw name="Enter_User_Name" owner="LoginKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:12.162927" level="INFO">Typing text 'admin1' into text field 'name:userName'.</msg>
-<arg>${txt_LoginUserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:12.158532" elapsed="0.214043"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${get_data[0]['username']} this user name</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-22T16:24:32.904717" elapsed="0.000973"/>
 </kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-03-21T15:31:12.157407" elapsed="0.215377"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${get_data[0]['password']} this user name</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-22T16:24:32.908444" elapsed="0.000997"/>
 </kw>
-<kw name="Enter_Password" owner="LoginKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:12.373828" level="INFO">Typing text 'admin1' into text field 'name:password'.</msg>
-<arg>${txt_LoginPassword}</arg>
-<arg>${PassWord}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:12.373470" elapsed="0.118065"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2026-03-21T15:31:12.373060" elapsed="0.118659"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-21T15:31:13.492673" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-21T15:31:12.491932" elapsed="1.001005"/>
-</kw>
-<kw name="Click_SignIn_Button" owner="LoginKeyWords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:13.494450" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
-<arg>${btn_signIn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:13.493929" elapsed="1.729784"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:13.493415" elapsed="1.730609"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-21T15:31:16.226049" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-21T15:31:15.224362" elapsed="1.001950"/>
-</kw>
-<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
-<arg>action=accept</arg>
-<arg>timeout=5s</arg>
-<doc>Verifies that no alert is present.</doc>
-<status status="PASS" start="2026-03-21T15:31:16.226711" elapsed="5.055530"/>
-</kw>
-<kw name="Verify_Successfull_Login" owner="LoginKeyWords">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:21.283279" level="INFO">Verifying element 'xpath://b[normalize-space()='Thank you for Loggin.']' contains exact text 'Thank you for Loggin.'.</msg>
-<arg>${txt_logintext}</arg>
-<arg>Thank you for Loggin.</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-03-21T15:31:21.282829" elapsed="0.055131"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:21.282541" elapsed="0.055592"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:06.885196" elapsed="14.453043"/>
-</kw>
-<suite id="s1-s1" name="Feature1" source="C:\Users\admin\PycharmProjects\robotframework\TestCaseSuite_init\Feature1">
-<suite id="s1-s1-s1" name="Registration Using init" source="C:\Users\admin\PycharmProjects\robotframework\TestCaseSuite_init\Feature1\Registration_Using_init.robot">
-<test id="s1-s1-s1-t1" name="Registraton_Page_Test" line="16">
-<kw name="click_register_Link" owner="RegisterPageKeyWords">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:21.401544" level="INFO">Clicking link 'link:REGISTER'.</msg>
-<arg>${register_link}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:21.401226" elapsed="1.241537"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:21.400791" elapsed="1.242145"/>
-</kw>
-<kw name="Enter_FirstName" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:22.650087" level="INFO">Typing text 'kkjjhhgg' into text field 'name:firstName'.</msg>
-<arg>${txt_firstname}</arg>
-<arg>${FirstName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:22.649736" elapsed="0.349919"/>
-</kw>
-<arg>${Fname}</arg>
-<status status="PASS" start="2026-03-21T15:31:22.649205" elapsed="0.350636"/>
-</kw>
-<kw name="Enter_LastName" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:23.010511" level="INFO">Typing text 'Rai' into text field 'name:lastName'.</msg>
-<arg>${txt_lastname}</arg>
-<arg>${LastName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:23.010169" elapsed="0.235228"/>
-</kw>
-<arg>${Lname}</arg>
-<status status="PASS" start="2026-03-21T15:31:23.009586" elapsed="0.235983"/>
-</kw>
-<kw name="Enter_phone" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:23.254289" level="INFO">Typing text '0002220000' into text field 'name:phone'.</msg>
-<arg>${txt_phone}</arg>
-<arg>${phone}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:23.253945" elapsed="0.327258"/>
-</kw>
-<arg>0002220000</arg>
-<status status="PASS" start="2026-03-21T15:31:23.253471" elapsed="0.327907"/>
-</kw>
-<kw name="Enter_Email" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:23.583961" level="INFO">Typing text 'abcs@hhh.com' into text field 'xpath://input[@id='userName']'.</msg>
-<arg>${txt_email}</arg>
-<arg>${Email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:23.583465" elapsed="0.345861"/>
-</kw>
-<arg>${email}</arg>
-<status status="PASS" start="2026-03-21T15:31:23.582731" elapsed="0.346779"/>
-</kw>
-<kw name="Enter_Address" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:23.933018" level="INFO">Typing text '30Tower street' into text field 'name:address1'.</msg>
-<arg>${txt_address}</arg>
-<arg>${address}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:23.932659" elapsed="0.275645"/>
-</kw>
-<arg>30Tower street</arg>
-<status status="PASS" start="2026-03-21T15:31:23.932125" elapsed="0.276387"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:24.216854" level="INFO">Typing text 'Mumbai' into text field 'name:city'.</msg>
-<arg>${txt_city}</arg>
-<arg>Mumbai</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:24.216420" elapsed="0.240604"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:24.458391" level="INFO">Typing text 'Maharahstra' into text field 'name:state'.</msg>
-<arg>${txt_state}</arg>
-<arg>Maharahstra</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:24.457992" elapsed="0.220838"/>
-</kw>
-<kw name="Enter_postalCode" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:24.689105" level="INFO">Typing text '410210' into text field 'name:postalCode'.</msg>
-<arg>${txt_postalcode}</arg>
-<arg>${postalcode}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:24.688700" elapsed="0.153138"/>
-</kw>
-<arg>410210</arg>
-<status status="PASS" start="2026-03-21T15:31:24.688221" elapsed="0.153790"/>
-</kw>
-<kw name="Select_country_from_dropdown" owner="RegisterPageKeyWords">
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:24.850765" level="INFO">Selecting options from selection list 'name:country' by label INDIA.</msg>
-<arg>${dropdown_country}</arg>
-<arg>${Country}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-03-21T15:31:24.850401" elapsed="0.605057"/>
-</kw>
-<arg>INDIA</arg>
-<status status="PASS" start="2026-03-21T15:31:24.849929" elapsed="0.605734"/>
-</kw>
-<kw name="Enter_User_Name_Input" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:25.482693" level="INFO">Typing text 'qatest' into text field 'xpath://input[@id='email']'.</msg>
-<arg>${txt_username_input}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:25.482235" elapsed="0.729384"/>
-</kw>
-<arg>qatest</arg>
-<status status="PASS" start="2026-03-21T15:31:25.481672" elapsed="0.730263"/>
-</kw>
-<kw name="ENTER_password_Input" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:26.243911" level="INFO">Typing text 'qa12345' into text field 'xpath://input[@name='password']'.</msg>
-<arg>${txt_password_input}</arg>
-<arg>${Password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:26.242777" elapsed="0.471662"/>
-</kw>
-<arg>qa12345</arg>
-<status status="PASS" start="2026-03-21T15:31:26.242301" elapsed="0.472342"/>
-</kw>
-<kw name="ENTER_Confirm_password" owner="RegisterPageKeyWords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:26.724250" level="INFO">Typing text 'qa12345' into text field 'xpath://input[@name='confirmPassword']'.</msg>
-<arg>${txt_Confirm_password}</arg>
-<arg>${ConfirmPassword}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:26.723886" elapsed="0.279422"/>
-</kw>
-<arg>qa12345</arg>
-<status status="PASS" start="2026-03-21T15:31:26.723395" elapsed="0.280124"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-21T15:31:32.009295" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-21T15:31:27.007034" elapsed="5.002702"/>
-</kw>
-<kw name="Click_Submit_Button" owner="RegisterPageKeyWords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:32.017933" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
-<arg>${button_submit}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:32.017359" elapsed="1.832091"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:32.016536" elapsed="1.833083"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-21T15:31:35.850718" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-21T15:31:33.850025" elapsed="2.000945"/>
-</kw>
-<kw name="Verify_Register_successfull" owner="RegisterPageKeyWords">
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:35.902821" level="INFO">Page title is 'Register: Mercury Tours'.</msg>
-<arg>Register: Mercury Tours</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2026-03-21T15:31:35.852457" elapsed="0.050620"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:35.851789" elapsed="0.051561"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-21T15:31:40.906733" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-21T15:31:35.905217" elapsed="5.001799"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:21.366370" elapsed="19.541448"/>
+<status status="PASS" start="2026-03-22T16:24:32.877901" elapsed="0.031864"/>
 </test>
-<status status="PASS" start="2026-03-21T15:31:21.341101" elapsed="19.568554"/>
-</suite>
-<status status="PASS" start="2026-03-21T15:31:21.338355" elapsed="19.574195"/>
-</suite>
-<suite id="s1-s2" name="Feature2" source="C:\Users\admin\PycharmProjects\robotframework\TestCaseSuite_init\Feature2">
-<suite id="s1-s2-s1" name="Support Click" source="C:\Users\admin\PycharmProjects\robotframework\TestCaseSuite_init\Feature2\Support_Click.robot">
-<test id="s1-s2-s1-t1" name="Click on SUpport" line="14">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:40.968189" level="INFO">Clicking element 'xpath:/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/a'.</msg>
-<arg>xpath:/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-21T15:31:40.967714" elapsed="0.826720"/>
-</kw>
-<status status="PASS" start="2026-03-21T15:31:40.957046" elapsed="0.837881"/>
-</test>
-<status status="PASS" start="2026-03-21T15:31:40.918918" elapsed="0.876871"/>
-</suite>
-<status status="PASS" start="2026-03-21T15:31:40.914356" elapsed="0.906608"/>
-</suite>
-<kw name="Logout" type="TEARDOWN">
-<kw name="Click_signoff" owner="LoginKeyWords">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-03-21T15:31:41.823824" level="INFO">Clicking link 'xpath://a[normalize-space()='SIGN-OFF']'.</msg>
-<msg time="2026-03-21T15:31:42.087008" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-03-21T15:31:42.087296" level="FAIL">Link with locator 'xpath://a[normalize-space()='SIGN-OFF']' not found.</msg>
-<arg>${txt_Signoff}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="FAIL" start="2026-03-21T15:31:41.823511" elapsed="0.277474">Link with locator 'xpath://a[normalize-space()='SIGN-OFF']' not found.</status>
-</kw>
-<status status="FAIL" start="2026-03-21T15:31:41.823244" elapsed="0.278060">Link with locator 'xpath://a[normalize-space()='SIGN-OFF']' not found.</status>
-</kw>
-<status status="FAIL" start="2026-03-21T15:31:41.822876" elapsed="0.278621">Link with locator 'xpath://a[normalize-space()='SIGN-OFF']' not found.</status>
-</kw>
-<status status="FAIL" start="2026-03-21T15:31:05.849979" elapsed="36.251659">Suite teardown failed:
-Link with locator 'xpath://a[normalize-space()='SIGN-OFF']' not found.</status>
+<status status="PASS" start="2026-03-22T16:24:32.058382" elapsed="0.852313"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TestCaseSuite init" id="s1" pass="0" fail="2" skip="0">TestCaseSuite init</stat>
-<stat name="Feature1" id="s1-s1" pass="0" fail="1" skip="0">TestCaseSuite init.Feature1</stat>
-<stat name="Registration Using init" id="s1-s1-s1" pass="0" fail="1" skip="0">TestCaseSuite init.Feature1.Registration Using init</stat>
-<stat name="Feature2" id="s1-s2" pass="0" fail="1" skip="0">TestCaseSuite init.Feature2</stat>
-<stat name="Support Click" id="s1-s2-s1" pass="0" fail="1" skip="0">TestCaseSuite init.Feature2.Support Click</stat>
+<stat name="TC 1 ReadExcel ReturnList" id="s1" pass="1" fail="0" skip="0">TC 1 ReadExcel ReturnList</stat>
 </suite>
 </statistics>
 <errors>
