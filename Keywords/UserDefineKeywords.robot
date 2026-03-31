@@ -44,6 +44,7 @@ Select Suggestion By Partial Text without try catch
     Sleep    1    # small wait for suggestions to render (use Wait instead in real tests)
 
     # Find all suggestion items
+    # here you can add wait untill elements is visible if required for suggestion variable
     @{suggestions}=    Get WebElements    xpath:of group of suggestion #This is comments
     Should Not Be Empty    ${suggestions}    msg=no suggestion found, check xpath or load time
     Log To Console    ${suggestions} these are suggestion
@@ -62,7 +63,7 @@ Select Suggestion By Partial Text without try catch
 
     Input Text    ${input_locator}    ${type_text}
     Sleep    1s
-
+    # here you can add wait untill elements is visible if required for suggestion variable
     @{suggestions}=    Get WebElements    xpath=//div[@role='listbox']//div[@role='option'] #This is dummy xpath for suggestion elements
     Log To Console    >>> Total suggestions found: ${suggestions.__len__()}
 
