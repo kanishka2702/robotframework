@@ -28,7 +28,7 @@ Get_Drop_Down_Values_and_Compare
     Log To Console    ${expected} This is expected outcome for comparision
     Lists Should Be Equal    ${options}    ${expected}
 
-TC31Select Option From Dropdown
+Select Option From Dropdown
     [Documentation]    Reusable keyword to select option from any dropdown.
     ...                Usage:
     ...                Select Option From Dropdown    id:country    India
@@ -36,3 +36,52 @@ TC31Select Option From Dropdown
     [Arguments]    ${locator}    ${option_text}
     Wait Until Element Is Visible    ${locator}    10s
     Select From List By Label        ${locator}    ${option_text}
+
+Select Suggestion By Partial Text without try catch
+    [Arguments]    ${input_locator}    ${type_text}    ${partial_match}
+
+    Input Text    ${input_locator}    ${type_text}
+    Sleep    1    # small wait for suggestions to render (use Wait instead in real tests)
+
+    # Find all suggestion items
+    @{suggestions}=    Get WebElements    xpath:of group of suggestion #This is comments
+    Should Not Be Empty    ${suggestions}    msg=no suggestion found, check xpath or load time
+    Log To Console    ${suggestions} these are suggestion
+    FOR    ${item}    IN    @{suggestions}
+        ${text}=    SeleniumLibrary.Get Text    ${item}
+        #Log To Console    >>>>Item Text: ${text}
+        IF    '${partial_match}' in '${text}'
+            #Log To Console    >>>>Match Found:-- ${text}
+            Click Element    ${item}
+            BREAK
+        END
+    END
+
+ Select Suggestion By Partial Text with try Catch
+    [Arguments]    ${input_locator}    ${type_text}    ${partial_match}
+
+    Input Text    ${input_locator}    ${type_text}
+    Sleep    1s
+
+    @{suggestions}=    Get WebElements    xpath=//div[@role='listbox']//div[@role='option'] #This is dummy xpath for suggestion elements
+    Log To Console    >>> Total suggestions found: ${suggestions.__len__()}
+
+    Should Not Be Empty    ${suggestions}    msg=No suggestions found, check xpath or increase sleep time
+
+    FOR    ${item}    IN    @{suggestions}
+        ${text}=    Get Text    ${item}
+        Log To Console    >>> Item Text: "${text}"
+
+        IF    '${partial_match}' in '${text}'
+            Log To Console    >>> Match found: "${text}" — clicking...
+            TRY
+                Click Element    ${item}
+                Log To Console    >>> Click successful
+            EXCEPT    AS    ${error}
+                Log To Console    >>> Click failed: ${error}
+            END
+            BREAK
+        ELSE
+            Log To Console    >>> Not matched: "${text}"
+        END
+    END
