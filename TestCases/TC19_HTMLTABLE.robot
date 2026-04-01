@@ -13,11 +13,11 @@ TableValidation
     ${rows}=    Get Element Count    xpath://*[@id="main"]/div[5]/table//tbody/tr
     ${columns}=    Get Element Count    xpath://*[@id="main"]/div[5]/table//tbody/tr[1]/th
 
-    Log To Console    ${rows}
-    Log To Console    ${columns}
+    Log To Console    ${rows} this is row count
+    Log To Console    ${columns} this column count
 
     ${data}=    Get Text    xpath://*[@id="main"]/div[5]/table//tbody/tr[5]/td[1]
-    Log To Console    ${data}
+    Log To Console    ${data} this is data
 
 
     #this will validate particular data in table like header should contain 'CustumerName' IN cOLUMN 2

@@ -1,49 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-22T16:24:32.054529" rpa="false" schemaversion="5">
-<suite id="s1" name="TC 1 ReadExcel ReturnList" source="C:\Users\admin\PycharmProjects\robotframework\ReadExcel_TC\TC_1_ReadExcel_ReturnList.robot">
-<test id="s1-t1" name="Read data from excel and return list" line="11">
-<kw name="Get Excel Data In List" owner="ExcelRead_Keywords">
-<kw name="Get Excel Data List" owner="utils">
-<msg time="2026-03-22T16:24:32.900699" level="INFO">${data} = [{'username': 'admin1', 'password': 'admin12pwd'}]</msg>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-04-01T15:33:56.379008" rpa="false" schemaversion="5">
+<suite id="s1" name="TC19 HTMLTABLE" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC19_HTMLTABLE.robot">
+<test id="s1-t1" name="TableValidation" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-01T15:33:56.869466" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/sql/sql_distinct.asp'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-01T15:33:56.869006" elapsed="5.195849"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.073106" elapsed="0.124698"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-04-01T15:34:02.314684" level="INFO">${rows} = 6</msg>
+<var>${rows}</var>
+<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.203558" elapsed="0.111221"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-04-01T15:34:02.345781" level="INFO">${columns} = 7</msg>
+<var>${columns}</var>
+<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.325911" elapsed="0.019948"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${rows} this is row count</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.362299" elapsed="0.001547"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${columns} this column count</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.364152" elapsed="0.000685"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-04-01T15:34:02.403198" level="INFO">${data} = 4</msg>
 <var>${data}</var>
-<arg>${file_path}</arg>
-<arg>${sheet_name}</arg>
-<status status="PASS" start="2026-03-22T16:24:32.881079" elapsed="0.019712"/>
+<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr[5]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.365106" elapsed="0.038179"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${data}</arg>
+<arg>${data} this is data</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-22T16:24:32.901083" elapsed="0.001615"/>
+<status status="PASS" start="2026-04-01T15:34:02.403804" elapsed="0.000589"/>
 </kw>
-<return>
-<value>${data}</value>
-<status status="PASS" start="2026-03-22T16:24:32.902964" elapsed="0.000152"/>
-</return>
-<msg time="2026-03-22T16:24:32.903414" level="INFO">${get_data} = [{'username': 'admin1', 'password': 'admin12pwd'}]</msg>
-<var>${get_data}</var>
-<arg>${file_path1}</arg>
-<arg>${sheet_name1}</arg>
-<doc>Reads data from an Excel file and returns it as a list of dictionaries</doc>
-<status status="PASS" start="2026-03-22T16:24:32.879543" elapsed="0.023931"/>
+<kw name="Table Column Should Contain" owner="SeleniumLibrary">
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
+<arg>2</arg>
+<arg>CustomerName</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.404676" elapsed="0.155435"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${get_data} this the data</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-22T16:24:32.903836" elapsed="0.000600"/>
+<kw name="Table Row Should Contain" owner="SeleniumLibrary">
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
+<arg>2</arg>
+<arg>2</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.588336" elapsed="0.400397"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${get_data[0]['username']} this user name</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-22T16:24:32.904717" elapsed="0.000973"/>
+<kw name="Table Cell Should Contain" owner="SeleniumLibrary">
+<msg time="2026-04-01T15:34:03.070486" level="INFO">Table cell contains 'Christina Berglund'.</msg>
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
+<arg>6</arg>
+<arg>3</arg>
+<arg>Christina Berglund</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<status status="PASS" start="2026-04-01T15:34:02.989175" elapsed="0.081477"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${get_data[0]['password']} this user name</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-22T16:24:32.908444" elapsed="0.000997"/>
+<kw name="Table Header Should Contain" owner="SeleniumLibrary">
+<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
+<arg>PostalCode</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" start="2026-04-01T15:34:03.071299" elapsed="0.615944"/>
 </kw>
-<status status="PASS" start="2026-03-22T16:24:32.877901" elapsed="0.031864"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-04-01T15:34:03.687706" elapsed="2.559268"/>
+</kw>
+<status status="PASS" start="2026-04-01T15:33:56.867320" elapsed="9.380380"/>
 </test>
-<status status="PASS" start="2026-03-22T16:24:32.058382" elapsed="0.852313"/>
+<status status="PASS" start="2026-04-01T15:33:56.382079" elapsed="9.867199"/>
 </suite>
 <statistics>
 <total>
@@ -52,7 +93,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC 1 ReadExcel ReturnList" id="s1" pass="1" fail="0" skip="0">TC 1 ReadExcel ReturnList</stat>
+<stat name="TC19 HTMLTABLE" id="s1" pass="1" fail="0" skip="0">TC19 HTMLTABLE</stat>
 </suite>
 </statistics>
 <errors>
