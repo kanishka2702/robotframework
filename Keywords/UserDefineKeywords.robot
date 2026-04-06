@@ -86,3 +86,25 @@ Select Suggestion By Partial Text without try catch
             Log To Console    >>> Not matched: "${text}"
         END
     END
+
+
+ Verify Elements Are Visible and capture screenshots  #this keyword is used for validating list of elements using forLoop,capturing image of elements
+    [Arguments]    @{elements}    ${path}  #@{elements} list of elements or any other list, ${path} where user wan to save images
+    ${timestamp}=    Get Time    epoch
+    FOR    ${index}    ${element}    IN ENUMERATE    @{elements}
+        Scroll Element Into View
+        ...    ${element}
+        Wait Until Element Is Visible
+        ...    ${element}
+        ...    20s
+        Element Should Be Visible
+        ...    ${element}
+
+        ${filename_elements}=    Set Variable
+        ...    ${path}/${TEST NAME}_${index}_${timestamp}.png
+        ${filename_page}=    Set Variable
+        ...    ${path}/${TEST NAME}_${index}_${timestamp}_page.png
+
+        Capture Element Screenshot    ${element}    ${filename_elements}
+        Capture Page Screenshot    ${filename_page}
+    END
