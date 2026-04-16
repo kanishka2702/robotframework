@@ -18,9 +18,9 @@ class ExcelReader:
         return username, password
 
 
-def get_excel_data_list(self, file_path, excel_sheet_name):
-    wb = openpyxl.load_workbook(file_path)
-    ws = wb[excel_sheet_name]
-    rows = list(ws.iter_rows(values_only=True))
-    headers = rows[0]
-    return [dict(zip(headers, row)) for row in rows[1:]]
+    def get_excel_data_list(self, file_path, excel_sheet_name):
+        wb = openpyxl.load_workbook(file_path)
+        ws = wb[excel_sheet_name]
+        rows = list(ws.iter_rows(values_only=True))
+        headers = rows[0]
+        return [dict(zip(headers, row)) for row in rows[1:]]
