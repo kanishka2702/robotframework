@@ -1,6 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    Collections
+Library    DateTime
+
 
 *** Keywords ***
 #LaunchBrowser
@@ -107,4 +109,22 @@ Select Suggestion By Partial Text without try catch
 
         Capture Element Screenshot    ${element}    ${filename_elements}
         Capture Page Screenshot    ${filename_page}
+    END
+
+
+# In this keyword user has to provide xpath/elements and list values which needs to validated
+Click Zoom And Verify Url
+    [Arguments]    ${element_xpath}    @{expected_url_suffixes}  #@{expected_url_suffixes} user can define list ${element_xpath} will besed to click element
+    ${zoom_in_out_path}    D:/Drive/Test/  #this same path for now ignore it
+    ${timestamp}=    Get Current Date    result_format=%Y-%m-%d_%H-%M-%S
+    FOR    ${suffix}    IN    @{expected_url_suffixes}
+        Wait Until Element Is Visible    ${element_xpath}
+        Click Element    ${element_xpath}
+        Sleep    1
+
+        ${current_url}=    Get Location
+        Sleep    3
+
+        Should End With    ${current_url}    ${suffix}
+        Capture Page Screenshot    ${zoom_in_out_path}/${suffix}_${timestamp}.png
     END
