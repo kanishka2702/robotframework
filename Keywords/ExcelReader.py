@@ -2,7 +2,8 @@ import openpyxl
 
 class ExcelReader:
 
-    def read_credentials_from_excel(self, file_path, sheet_name="Login"):
+    def \
+            read_credentials_from_excel(self, file_path, sheet_name="Login"):
         """
         Reads username and password from Excel.
         Expects headers in row 1: username | password
