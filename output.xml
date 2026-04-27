@@ -1,90 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-04-01T15:33:56.379008" rpa="false" schemaversion="5">
-<suite id="s1" name="TC19 HTMLTABLE" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC19_HTMLTABLE.robot">
-<test id="s1-t1" name="TableValidation" line="9">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-04-27T16:07:00.295636" rpa="false" schemaversion="5">
+<suite id="s1" name="TC33 FOR LOOP TO VERIFY ELEMENTS" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC33_FOR_LOOP_TO_VERIFY_ELEMENTS.robot">
+<test id="s1-t1" name="Get_Dropdown_Values" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-01T15:33:56.869466" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/sql/sql_distinct.asp'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<msg time="2026-04-27T16:07:00.903838" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<arg>https://demo.guru99.com/test/newtours/</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-01T15:33:56.869006" elapsed="5.195849"/>
+<status status="PASS" start="2026-04-27T16:07:00.902489" elapsed="8.721898"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.073106" elapsed="0.124698"/>
+<status status="PASS" start="2026-04-27T16:07:09.646249" elapsed="0.136225"/>
 </kw>
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2026-04-01T15:34:02.314684" level="INFO">${rows} = 6</msg>
-<var>${rows}</var>
-<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.203558" elapsed="0.111221"/>
+<kw name="click_register_Link" owner="RegisterPageKeyWords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:09.797768" level="INFO">Clicking link 'link:REGISTER'.</msg>
+<arg>${register_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T16:07:09.795793" elapsed="2.025669"/>
 </kw>
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2026-04-01T15:34:02.345781" level="INFO">${columns} = 7</msg>
-<var>${columns}</var>
-<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr[1]/th</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.325911" elapsed="0.019948"/>
+<status status="PASS" start="2026-04-27T16:07:09.788456" elapsed="2.033358"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${rows} this is row count</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.362299" elapsed="0.001547"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${columns} this column count</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.364152" elapsed="0.000685"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-04-01T15:34:02.403198" level="INFO">${data} = 4</msg>
-<var>${data}</var>
-<arg>xpath://*[@id="main"]/div[5]/table//tbody/tr[5]/td[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.365106" elapsed="0.038179"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${data} this is data</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.403804" elapsed="0.000589"/>
-</kw>
-<kw name="Table Column Should Contain" owner="SeleniumLibrary">
-<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
-<arg>2</arg>
-<arg>CustomerName</arg>
-<doc>Verifies table column contains text ``expected``.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.404676" elapsed="0.155435"/>
-</kw>
-<kw name="Table Row Should Contain" owner="SeleniumLibrary">
-<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
-<arg>2</arg>
-<arg>2</arg>
-<doc>Verifies that table row contains text ``expected``.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.588336" elapsed="0.400397"/>
-</kw>
-<kw name="Table Cell Should Contain" owner="SeleniumLibrary">
-<msg time="2026-04-01T15:34:03.070486" level="INFO">Table cell contains 'Christina Berglund'.</msg>
-<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
-<arg>6</arg>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-04-27T16:07:14.826795" level="INFO">Slept 3 seconds.</msg>
 <arg>3</arg>
-<arg>Christina Berglund</arg>
-<doc>Verifies table cell contains text ``expected``.</doc>
-<status status="PASS" start="2026-04-01T15:34:02.989175" elapsed="0.081477"/>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-04-27T16:07:11.824908" elapsed="3.002091"/>
 </kw>
-<kw name="Table Header Should Contain" owner="SeleniumLibrary">
-<arg>xpath://html/body/div[5]/div/div[2]/div[1]/div[1]/div[5]/table</arg>
-<arg>PostalCode</arg>
-<doc>Verifies table header contains text ``expected``.</doc>
-<status status="PASS" start="2026-04-01T15:34:03.071299" elapsed="0.615944"/>
+<for flavor="IN ZIP">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:14.861028" level="INFO">Clicking element 'name:firstName'.</msg>
+<arg>${elements}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T16:07:14.847147" elapsed="0.234902"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T15:34:03.687706" elapsed="2.559268"/>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.220043" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_firstname.png"&gt;&lt;img src="image_capture/txt_firstname.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_path}/${screen_shot_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.082365" elapsed="0.137890"/>
 </kw>
-<status status="PASS" start="2026-04-01T15:33:56.867320" elapsed="9.380380"/>
+<var name="${elements}">name:firstName</var>
+<var name="${screen_shot_name}">txt_firstname</var>
+<status status="PASS" start="2026-04-27T16:07:14.841291" elapsed="0.379088"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.221194" level="INFO">Clicking element 'name:lastName'.</msg>
+<arg>${elements}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.220882" elapsed="0.120890"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.462272" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_phone.png"&gt;&lt;img src="image_capture/txt_phone.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_path}/${screen_shot_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.342106" elapsed="0.120330"/>
+</kw>
+<var name="${elements}">name:lastName</var>
+<var name="${screen_shot_name}">txt_phone</var>
+<status status="PASS" start="2026-04-27T16:07:15.220687" elapsed="0.241858"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.463302" level="INFO">Clicking element 'name:phone'.</msg>
+<arg>${elements}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.462992" elapsed="0.114806"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.676483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_phone.png"&gt;&lt;img src="image_capture/txt_phone.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_path}/${screen_shot_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.578064" elapsed="0.098579"/>
+</kw>
+<var name="${elements}">name:phone</var>
+<var name="${screen_shot_name}">txt_phone</var>
+<status status="PASS" start="2026-04-27T16:07:15.462802" elapsed="0.213952"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.677500" level="INFO">Clicking element 'name:city'.</msg>
+<arg>${elements}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.677187" elapsed="0.099415"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.873963" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_city.png"&gt;&lt;img src="image_capture/txt_city.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_path}/${screen_shot_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.776882" elapsed="0.097236"/>
+</kw>
+<var name="${elements}">name:city</var>
+<var name="${screen_shot_name}">txt_city</var>
+<status status="PASS" start="2026-04-27T16:07:15.677004" elapsed="0.197228"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:15.874960" level="INFO">Clicking element 'name:state'.</msg>
+<arg>${elements}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.874664" elapsed="0.120488"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:16.089350" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_state.png"&gt;&lt;img src="image_capture/txt_state.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_path}/${screen_shot_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-04-27T16:07:15.995421" elapsed="0.094104"/>
+</kw>
+<var name="${elements}">name:state</var>
+<var name="${screen_shot_name}">txt_state</var>
+<status status="PASS" start="2026-04-27T16:07:15.874475" elapsed="0.215167"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:16.090508" level="INFO">Clicking element 'name:postalCode'.</msg>
+<arg>${elements}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T16:07:16.090113" elapsed="0.084488"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-04-27T16:07:16.290156" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_postalcode.png"&gt;&lt;img src="image_capture/txt_postalcode.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_path}/${screen_shot_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-04-27T16:07:16.174895" elapsed="0.115873"/>
+</kw>
+<var name="${elements}">name:postalCode</var>
+<var name="${screen_shot_name}">txt_postalcode</var>
+<status status="PASS" start="2026-04-27T16:07:16.089894" elapsed="0.201033"/>
+</iter>
+<var>${elements}</var>
+<var>${screen_shot_name}</var>
+<value>${REGISTER_PAGE_ELEMENT_LIST}</value>
+<value>${SCREEN_NAME}</value>
+<status status="PASS" start="2026-04-27T16:07:14.828147" elapsed="1.462910"/>
+</for>
+<status status="PASS" start="2026-04-27T16:07:00.900606" elapsed="15.403069"/>
 </test>
-<status status="PASS" start="2026-04-01T15:33:56.382079" elapsed="9.867199"/>
+<status status="PASS" start="2026-04-27T16:07:00.298296" elapsed="16.010647"/>
 </suite>
 <statistics>
 <total>
@@ -93,9 +148,10 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC19 HTMLTABLE" id="s1" pass="1" fail="0" skip="0">TC19 HTMLTABLE</stat>
+<stat name="TC33 FOR LOOP TO VERIFY ELEMENTS" id="s1" pass="1" fail="0" skip="0">TC33 FOR LOOP TO VERIFY ELEMENTS</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-04-27T16:07:00.899332" level="ERROR">Error in file 'C:\Users\admin\PycharmProjects\robotframework\Keywords\Constants.robot' on line 3: Library 'Collections' expected 0 arguments, got 1.</msg>
 </errors>
 </robot>

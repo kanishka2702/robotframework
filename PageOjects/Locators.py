@@ -20,3 +20,6 @@ txt_username_input="xpath://input[@id='email']"
 txt_password_input="xpath://input[@name='password']"
 txt_Confirm_password="xpath://input[@name='confirmPassword']"
 button_submit="xpath://input[@name='submit']"
+
+#Create element list in locators.py file only for robot framework
+REGISTER_PAGE_ELEMENT_LIST= [txt_firstname,txt_lastname,txt_phone,txt_city,txt_state,txt_postalcode]
