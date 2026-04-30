@@ -111,6 +111,20 @@ Select Suggestion By Partial Text without try catch
         Capture Page Screenshot    ${filename_page}
     END
 
+ #using for loop to verify elements & capture screen shot, screenshots part is not mendatory
+ Verify Elements Are Visible
+    [Arguments]    ${timeout}=20s    ${path}=${NONE}    @{elements}
+    ${timestamp}=    Get Time    epoch
+    FOR    ${index}    ${element}    IN ENUMERATE    @{elements}
+        Log    Verifying visible element [${index}]: ${element}
+        Wait Until Element Is Visible    ${element}    ${timeout}
+        Element Should Be Visible    ${element}
+        IF    $path != $NONE
+            ${filename}=    Set Variable    ${path}/${TEST NAME}_visible_${index}_${timestamp}.png
+            Capture Element Screenshot    ${element}    ${filename}
+        END
+    END
+
 
 # In this keyword user has to provide xpath/elements and list values which needs to validated
 Click Zoom And Verify Url
