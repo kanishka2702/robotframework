@@ -142,3 +142,18 @@ Click Zoom And Verify Url
         Should End With    ${current_url}    ${suffix}
         Capture Page Screenshot    ${zoom_in_out_path}/${suffix}_${timestamp}.png
     END
+
+# This keyword reads key-value pairs from a two-column HTML table and returns them as a dictionary.
+Get Object Details As Dictionary
+    &{details}=    Create Dictionary
+
+    # Get all rows from the table
+    @{keys}=     Get WebElements    xpath://*[@id='object_info-details-box']//tr/td[1]  #In table first Column key
+    @{values}=   Get WebElements    xpath://*[@id='object_info-details-box']//tr/td[2]    #In table 2nd column value
+
+    FOR    ${index}    ${key}    IN ENUMERATE    @{keys}
+        # Get label (left column) and value (right column)
+        ${key_text}=      SeleniumLibrary.Get Text    ${key}
+        ${value_text}=    SeleniumLibrary.Get Text    ${values}[${index}]
+        Set To Dictionary    ${details}    ${key_text}=${value_text}
+    END
