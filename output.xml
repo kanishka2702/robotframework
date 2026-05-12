@@ -1,145 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-04-27T16:07:00.295636" rpa="false" schemaversion="5">
-<suite id="s1" name="TC33 FOR LOOP TO VERIFY ELEMENTS" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC33_FOR_LOOP_TO_VERIFY_ELEMENTS.robot">
-<test id="s1-t1" name="Get_Dropdown_Values" line="9">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-05-12T21:41:30.409163" rpa="false" schemaversion="5">
+<suite id="s1" name="TC34 Verify Expected Value with 2 conditions" source="C:\Users\admin\PycharmProjects\robotframework\TestCases\TC34_Verify_Expected_Value_with_2_conditions.robot">
+<test id="s1-t1" name="VERIFY_EXPECTED_VALUE_WITH_2_CONDITIONS" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:00.903838" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<msg time="2026-05-12T21:41:31.144467" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
 <arg>https://demo.guru99.com/test/newtours/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-27T16:07:00.902489" elapsed="8.721898"/>
+<status status="PASS" start="2026-05-12T21:41:31.143343" elapsed="11.286223"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-27T16:07:09.646249" elapsed="0.136225"/>
+<status status="PASS" start="2026-05-12T21:41:42.433432" elapsed="0.224925"/>
 </kw>
 <kw name="click_register_Link" owner="RegisterPageKeyWords">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:09.797768" level="INFO">Clicking link 'link:REGISTER'.</msg>
+<msg time="2026-05-12T21:41:42.668788" level="INFO">Clicking link 'link:REGISTER'.</msg>
 <arg>${register_link}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T16:07:09.795793" elapsed="2.025669"/>
+<status status="PASS" start="2026-05-12T21:41:42.667623" elapsed="1.319497"/>
 </kw>
-<status status="PASS" start="2026-04-27T16:07:09.788456" elapsed="2.033358"/>
+<status status="PASS" start="2026-05-12T21:41:42.666438" elapsed="1.320976"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-27T16:07:14.826795" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
+<msg time="2026-05-12T21:41:49.021437" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-27T16:07:11.824908" elapsed="3.002091"/>
+<status status="PASS" start="2026-05-12T21:41:43.988024" elapsed="5.033676"/>
 </kw>
-<for flavor="IN ZIP">
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:14.861028" level="INFO">Clicking element 'name:firstName'.</msg>
-<arg>${elements}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T16:07:14.847147" elapsed="0.234902"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-12T21:41:49.082746" level="INFO">${get_Text} = REGISTER</msg>
+<var>${get_Text}</var>
+<arg>${register_link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T21:41:49.022417" elapsed="0.060413"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.220043" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_firstname.png"&gt;&lt;img src="image_capture/txt_firstname.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${image_path}/${screen_shot_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.082365" elapsed="0.137890"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${get_Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-12T21:41:49.083298" elapsed="0.000647"/>
 </kw>
-<var name="${elements}">name:firstName</var>
-<var name="${screen_shot_name}">txt_firstname</var>
-<status status="PASS" start="2026-04-27T16:07:14.841291" elapsed="0.379088"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.221194" level="INFO">Clicking element 'name:lastName'.</msg>
-<arg>${elements}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.220882" elapsed="0.120890"/>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${get_Text}</arg>
+<arg>REGISTER</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-05-12T21:41:49.084916" elapsed="0.000673"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.462272" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_phone.png"&gt;&lt;img src="image_capture/txt_phone.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${image_path}/${screen_shot_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.342106" elapsed="0.120330"/>
+<msg time="2026-05-12T21:41:49.085786" level="INFO">${is_Text1} = True</msg>
+<var>${is_Text1}</var>
+<arg>Should Contain</arg>
+<arg>${get_Text}</arg>
+<arg>REGISTER</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-05-12T21:41:49.084288" elapsed="0.001550"/>
 </kw>
-<var name="${elements}">name:lastName</var>
-<var name="${screen_shot_name}">txt_phone</var>
-<status status="PASS" start="2026-04-27T16:07:15.220687" elapsed="0.241858"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.463302" level="INFO">Clicking element 'name:phone'.</msg>
-<arg>${elements}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.462992" elapsed="0.114806"/>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2026-05-12T21:41:49.087212" level="FAIL">'REGISTER' does not contain 'lastName'</msg>
+<arg>${get_Text}</arg>
+<arg>lastName</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2026-05-12T21:41:49.086665" elapsed="0.000787">'REGISTER' does not contain 'lastName'</status>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.676483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_phone.png"&gt;&lt;img src="image_capture/txt_phone.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${image_path}/${screen_shot_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.578064" elapsed="0.098579"/>
+<msg time="2026-05-12T21:41:49.087646" level="INFO">${is_Text2} = False</msg>
+<var>${is_Text2}</var>
+<arg>Should Contain</arg>
+<arg>${get_Text}</arg>
+<arg>lastName</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-05-12T21:41:49.086190" elapsed="0.001504"/>
 </kw>
-<var name="${elements}">name:phone</var>
-<var name="${screen_shot_name}">txt_phone</var>
-<status status="PASS" start="2026-04-27T16:07:15.462802" elapsed="0.213952"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.677500" level="INFO">Clicking element 'name:city'.</msg>
-<arg>${elements}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.677187" elapsed="0.099415"/>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_Text1} or ${is_Text2}</arg>
+<arg>msg=URL '${get_Text}' did not contain 'firstName' or 'lastName'</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-12T21:41:49.087986" elapsed="0.000704"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.873963" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_city.png"&gt;&lt;img src="image_capture/txt_city.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${image_path}/${screen_shot_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.776882" elapsed="0.097236"/>
-</kw>
-<var name="${elements}">name:city</var>
-<var name="${screen_shot_name}">txt_city</var>
-<status status="PASS" start="2026-04-27T16:07:15.677004" elapsed="0.197228"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:15.874960" level="INFO">Clicking element 'name:state'.</msg>
-<arg>${elements}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.874664" elapsed="0.120488"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:16.089350" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_state.png"&gt;&lt;img src="image_capture/txt_state.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${image_path}/${screen_shot_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-04-27T16:07:15.995421" elapsed="0.094104"/>
-</kw>
-<var name="${elements}">name:state</var>
-<var name="${screen_shot_name}">txt_state</var>
-<status status="PASS" start="2026-04-27T16:07:15.874475" elapsed="0.215167"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:16.090508" level="INFO">Clicking element 'name:postalCode'.</msg>
-<arg>${elements}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T16:07:16.090113" elapsed="0.084488"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-04-27T16:07:16.290156" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="image_capture/txt_postalcode.png"&gt;&lt;img src="image_capture/txt_postalcode.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${image_path}/${screen_shot_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-04-27T16:07:16.174895" elapsed="0.115873"/>
-</kw>
-<var name="${elements}">name:postalCode</var>
-<var name="${screen_shot_name}">txt_postalcode</var>
-<status status="PASS" start="2026-04-27T16:07:16.089894" elapsed="0.201033"/>
-</iter>
-<var>${elements}</var>
-<var>${screen_shot_name}</var>
-<value>${REGISTER_PAGE_ELEMENT_LIST}</value>
-<value>${SCREEN_NAME}</value>
-<status status="PASS" start="2026-04-27T16:07:14.828147" elapsed="1.462910"/>
-</for>
-<status status="PASS" start="2026-04-27T16:07:00.900606" elapsed="15.403069"/>
+<status status="PASS" start="2026-05-12T21:41:31.141307" elapsed="17.947861"/>
 </test>
-<status status="PASS" start="2026-04-27T16:07:00.298296" elapsed="16.010647"/>
+<status status="PASS" start="2026-05-12T21:41:30.420059" elapsed="18.670066"/>
 </suite>
 <statistics>
 <total>
@@ -148,10 +88,10 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC33 FOR LOOP TO VERIFY ELEMENTS" id="s1" pass="1" fail="0" skip="0">TC33 FOR LOOP TO VERIFY ELEMENTS</stat>
+<stat name="TC34 Verify Expected Value with 2 conditions" id="s1" pass="1" fail="0" skip="0">TC34 Verify Expected Value with 2 conditions</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-04-27T16:07:00.899332" level="ERROR">Error in file 'C:\Users\admin\PycharmProjects\robotframework\Keywords\Constants.robot' on line 3: Library 'Collections' expected 0 arguments, got 1.</msg>
+<msg time="2026-05-12T21:41:31.138820" level="ERROR">Error in file 'C:\Users\admin\PycharmProjects\robotframework\Keywords\Constants.robot' on line 3: Library 'Collections' expected 0 arguments, got 1.</msg>
 </errors>
 </robot>

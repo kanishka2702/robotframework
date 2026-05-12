@@ -157,3 +157,10 @@ Get Object Details As Dictionary
         ${value_text}=    SeleniumLibrary.Get Text    ${values}[${index}]
         Set To Dictionary    ${details}    ${key_text}=${value_text}
     END
+
+
+ Generate Random String
+     [Arguments]    ${base_name}
+     ${timestamp}=    Get Current Date    result_format=%Y%m%d%H%M%S
+     ${unique_name}=    Set Variable    ${base_name}_${timestamp}
+     RETURN    ${unique_name}
