@@ -1,0 +1,24 @@
+{
+  "name": "robotframework",
+  "version": "1.0.0",
+  "description": "This projects for practicing ROBOTFRAMEWORK automation with Pycharm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanishka2702/robotframework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kanishka2702/robotframework/issues"
+  },
+  "homepage": "https://github.com/kanishka2702/robotframework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}

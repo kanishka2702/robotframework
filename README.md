@@ -31,3 +31,18 @@ install all required plugins recommended by IDE(Pycharm,vs code etc)
 save below content in .bat file
 cd C:\Users\admin\PycharmProjects\robotframework
 pabot --processes 3 --outputdir Results1 TestCases1\*.robot
+
+****_How to install Playwright codegen, which is used to record script with locators/Elements_****
+
+npm install -D @playwright/test
+
+
+Install Playwright (Node.js project): run npm init -y && npm install -D @playwright/test.
+
+Install browsers: run npx playwright install.
+
+Start recorder for a site: run npx playwright codegen https://demo.guru99.com/test/newtours/
+
+Interact in the opened browser; Codegen will record and show generated code in the Inspector.
+
+Stop recording and copy or save the generated script (or use --output <file> to write directly)
